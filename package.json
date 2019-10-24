@@ -1,0 +1,7 @@
+{
+  "name": "KinessAPI",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "antelbra <braantela@gmail.com>",
+  "license": "MIT"
+}
