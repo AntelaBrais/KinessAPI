@@ -1,0 +1,31 @@
+type Course {
+  id: ID!
+  title: String!
+  teacher: String
+  description: String!
+  topic: String
+}
+
+type Muscle {
+  id: ID
+  name: String
+}
+
+type Material {
+  id: ID
+  name: String
+}
+
+type Exercise {
+  id: ID
+  name: String
+  agonists: [Muscle]
+  material: [Material]
+}
+
+# Los query son las posibles consultas que puedo realizar a la API. Es decir, las funciones con las que puedo consultar datos a la base de datos.
+type Query {
+  "Devuelve un array de elementos tipo Course"
+  getCourses: [Course]
+  getCourse(id: ID!): Course
+}
