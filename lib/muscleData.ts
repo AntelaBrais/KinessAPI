@@ -6,7 +6,13 @@ enum InnervationNerves {
   MedialPectoral = 'Medial Pectoral nerve',
   UpperSubscapular = 'Upper subscapular nerve',
   LowerSubscapular = 'Lower subscapular nerve',
-  Axillary = 'Axillary nerve'
+  Axillary = 'Axillary nerve',
+  Suprascapula = 'Suprascapula nerve',
+  Thoracodorsal = 'Thoracodorsal nerve',
+  Lumbar = 'Lumbar nerve',
+  Femoral = 'Femoral nerve',
+  Obturador = 'Obturador nerve',
+  Sciatic = 'Sciatic nerve'
 }
 
 enum NerveRoots {
@@ -34,7 +40,10 @@ enum NerveRoots {
   l2 = 'L2',
   l3 = 'L3',
   l4 = 'L4',
-  l5 = 'L5'
+  l5 = 'L5',
+  s1 = 'S1',
+  s2 = 'S2',
+  s3 = 'S3'
 }
 
 interface Innervation {
@@ -45,20 +54,46 @@ interface Innervation {
 enum Action {
   ForearmSupination = 'Supination of the forearm',
   ForearmPronation = 'Pronation of the forearm',
+
   ElbowFlexion = 'Flexion of the elbow',
+  ElbowExtension = 'Extension of the elbow',
+
   WeakShoulderFlexion = 'Weak flexion of the shoulder',
   WeakShoulderAbduction = 'Weak Abduction of the Shoulder',
-  ElbowExtension = 'Extension of the elbow',
+
   ShoulderExtension = 'Extension of the shoulder',
   ShoulderFlexion = 'Flexion of the shoulder',
   ShoulderAdduction = 'Adduction of the shoulder',
   ShoulderAbduction = 'Abudction of the shoulder',
+
   ShoulderHorizontalAbduction = 'Horizontal abduction of the shoulder',
   ShoulderHorizontalAdduction = 'Horizontal adduction of the shoulder',
   ShoulderInternalRotation = 'Internal rotation of the shoulder',
   ShoulderExternalRotation = 'External rotation of the shoulder',
   ShoulderDiagonalAdduction = 'Diagonal Adduction of the shoulder',
-  ShoulderDiagonalAbduction = 'Diagonal Abduction of the shoulder'
+  ShoulderDiagonalAbduction = 'Diagonal Abduction of the shoulder',
+
+  HipFlexion = 'Flexion of the hip',
+  HipExtension = 'Extension of the hip',
+  HipAdduction = 'Adduction of the hip',
+  HipAbduction = 'Abduction of the hip',
+  AnteriorPelvicRotation = 'Anterior Pelvic Rotation',
+  HipExternalRotation = 'External Rotation of the hip',
+  HipInternalRotation = 'Internal Rotation of the hip',
+  HipInternalRotationKneeFlexed = 'Internal rotation of the hip when knee is flexed',
+  PelvicTransverseRotationContralaterallyFtabilizedFemur = 'Transverse pelvic rotation contralaterally when ipsilateral femur is stabilized',
+
+  LumbarSpineFlexion = 'Flexion of the lumbar spine',
+  LumbarSpineLateralFlexion = 'Lateral flexion of the lumbar spine',
+  PelvicLateralRotationContralateral = 'Lateral rotation of the pelvic to the contralateral side',
+
+  PelvicPosteriorRotation = 'Posterior Rotation of the Pelvic',
+
+  KneeExtension = 'Extension of the knee',
+  KneeFlexion = 'Flexion of the knee',
+  KneeInternalRotation = 'Internal rotation of the knee',
+
+  ThighExternalRotation = 'External Rotation of the thigh'
 }
 
 enum PlaneMotion {
@@ -399,5 +434,312 @@ const deltoidPosterior: Muscle = {
   innervation: {
     nerve: InnervationNerves.Axillary,
     root: [NerveRoots.c5, NerveRoots.c6]
+  }
+}
+
+const deltoidGroup: Array<Muscle> = [
+  deltoidAnterior,
+  deltoidMiddle,
+  deltoidPosterior
+]
+
+const supraSpinatus: Muscle = {
+  name: 'Supra-spinatus',
+  origin: 'Medial 2/3 of supraspinous fossa',
+  insertion: 'Superiorly on greater tubercle of humerus',
+  action: [Action.ShoulderAbduction],
+  planeMotion: [PlaneMotion.Frontal],
+  innervation: {
+    nerve: InnervationNerves.Suprascapula,
+    root: [NerveRoots.c5]
+  }
+}
+
+const latissimusDorsi: Muscle = {
+  name: 'Latissimus Dorse',
+  origin:
+    'Posterior crest of ilium, back of sacrum and spinous processes of lumbar and lower six thoracic vertebrae, slips from lower three ribs',
+  insertion:
+    'Medial side of intertubercular groove of humerus, just anterior to the insertion of the teres major',
+  action: [
+    Action.ShoulderExtension,
+    Action.ShoulderAdduction,
+    Action.ShoulderInternalRotation,
+    Action.ShoulderHorizontalAbduction
+  ],
+  planeMotion: [
+    PlaneMotion.Frontal,
+    PlaneMotion.Sagittal,
+    PlaneMotion.Transverse
+  ],
+  innervation: {
+    nerve: InnervationNerves.Suprascapula,
+    root: [NerveRoots.c6, NerveRoots.c7, NerveRoots.c8]
+  }
+}
+
+const teresMajor: Muscle = {
+  name: 'Teres Major',
+  origin:
+    'Posteriorly on inferior third of lateral border of scapula and just superior to the inferior angle',
+  insertion:
+    'Medial lip of intertubercular groove of humerus, just posterior to the insertion of the latissimus dorsi',
+  action: [
+    Action.ShoulderExtension,
+    Action.ShoulderAdduction,
+    Action.ShoulderInternalRotation
+  ],
+  planeMotion: [
+    PlaneMotion.Frontal,
+    PlaneMotion.Sagittal,
+    PlaneMotion.Transverse
+  ],
+  innervation: {
+    nerve: InnervationNerves.LowerSubscapular,
+    root: [NerveRoots.c5, NerveRoots.c6]
+  }
+}
+
+const infraSpinatus: Muscle = {
+  name: 'Infra-spinatus',
+  origin: 'Infraspinous fossa just below spine of scapula',
+  insertion: 'Posteriorly on greater tubercle of humerus',
+  action: [
+    Action.ShoulderExtension,
+    Action.ShoulderDiagonalAbduction,
+    Action.ShoulderExternalRotation,
+    Action.ShoulderHorizontalAbduction
+  ],
+  planeMotion: [
+    PlaneMotion.Diagonal,
+    PlaneMotion.Sagittal,
+    PlaneMotion.Transverse
+  ],
+  innervation: {
+    nerve: InnervationNerves.Suprascapula,
+    root: [NerveRoots.c5, NerveRoots.c6]
+  }
+}
+
+const teresMinor: Muscle = {
+  name: 'Teres Minor',
+  origin: 'Posteriorly on upper and middle aspect of lateral border of scapula',
+  insertion: 'Posteriorly on greater tubercle of humerus',
+  action: [
+    Action.ShoulderExtension,
+    Action.ShoulderDiagonalAbduction,
+    Action.ShoulderExternalRotation,
+    Action.ShoulderHorizontalAbduction
+  ],
+  planeMotion: [
+    PlaneMotion.Diagonal,
+    PlaneMotion.Sagittal,
+    PlaneMotion.Transverse
+  ],
+  innervation: {
+    nerve: InnervationNerves.Axillary,
+    root: [NerveRoots.c5, NerveRoots.c6]
+  }
+}
+
+const iliacus: Muscle = {
+  name: 'Iliacus',
+  origin: 'Inner surface of the ilium',
+  insertion: 'Lesser trochanter of the femur and shaft just below',
+  action: [
+    Action.HipFlexion,
+    Action.AnteriorPelvicRotation,
+    Action.HipExternalRotation,
+    Action.PelvicTransverseRotationContralaterallyFtabilizedFemur
+  ],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Transverse],
+  innervation: {
+    nerve: [InnervationNerves.Lumbar, InnervationNerves.Femoral],
+    root: [NerveRoots.l2, NerveRoots.l4]
+  }
+}
+
+const psoas: Muscle = {
+  name: 'Psoas major and minor',
+  origin:
+    'Lower borders of the transverse processes (L1–L5), sides of the bodies of the last thoracic vertebra (T12), the lumbar vertebrae (L1–L5), intervertebral fibrocartilages, and base of the sacrum',
+  insertion:
+    'Lesser trochanter of the femur and shaft just below psoas minor; pectineal line (of pubis) and iliopectineal eminence',
+  action: [
+    Action.HipFlexion,
+    Action.AnteriorPelvicRotation,
+    Action.LumbarSpineFlexion,
+    Action.HipExternalRotation,
+    Action.PelvicTransverseRotationContralaterallyFtabilizedFemur,
+    Action.LumbarSpineLateralFlexion,
+    Action.PelvicLateralRotationContralateral
+  ],
+  planeMotion: [
+    PlaneMotion.Sagittal,
+    PlaneMotion.Transverse,
+    PlaneMotion.Frontal
+  ],
+  innervation: {
+    nerve: [InnervationNerves.Lumbar, InnervationNerves.Femoral],
+    root: [NerveRoots.l2, NerveRoots.l4]
+  }
+}
+
+const rectusFemoris: Muscle = {
+  name: 'Rectus Femoris',
+  origin:
+    'Anterior inferior iliac spine of the ilium and groove (poste- rior) above the acetabulum',
+  insertion:
+    'Superior aspect of the patella and patella tendon to the tibial tuberosity',
+  action: [
+    Action.HipFlexion,
+    Action.KneeExtension,
+    Action.AnteriorPelvicRotation
+  ],
+  planeMotion: [PlaneMotion.Sagittal],
+  innervation: {
+    nerve: [InnervationNerves.Femoral],
+    root: [NerveRoots.l2, NerveRoots.l4]
+  }
+}
+
+const sartorius: Muscle = {
+  name: 'Sartorius',
+  origin: 'Anterior superior iliac spine and notch just below the spine',
+  insertion: 'Anterior medial surface of the tibia just below the condyle',
+  action: [
+    Action.HipFlexion,
+    Action.KneeFlexion,
+    Action.AnteriorPelvicRotation,
+    Action.ThighExternalRotation,
+    Action.KneeInternalRotation,
+    Action.HipAbduction
+  ],
+  planeMotion: [
+    PlaneMotion.Sagittal,
+    PlaneMotion.Frontal,
+    PlaneMotion.Transverse
+  ],
+  innervation: {
+    nerve: [InnervationNerves.Femoral],
+    root: [NerveRoots.l2, NerveRoots.l3]
+  }
+}
+
+const pectineus: Muscle = {
+  name: 'Pectineus',
+  origin: 'Space 1 inch wide on the front of the pubis just above the crest',
+  insertion:
+    'Rough line leading from the lesser trochanter down to the linea aspera',
+  action: [Action.HipFlexion, Action.HipAdduction, Action.HipExternalRotation],
+  planeMotion: [
+    PlaneMotion.Sagittal,
+    PlaneMotion.Frontal,
+    PlaneMotion.Transverse
+  ],
+  innervation: {
+    nerve: [InnervationNerves.Femoral],
+    root: [NerveRoots.l2, NerveRoots.l4]
+  }
+}
+
+const adductorBrevis: Muscle = {
+  name: 'Adductor Brevis',
+  origin:
+    'Front of the inferior pubic ramus just below the origin of the adductor longus',
+  insertion:
+    'Lower 2/3 of the pectineal line of the femur and the upper half of the medial lip of the linea aspera',
+  action: [Action.HipFlexion, Action.HipAdduction, Action.HipExternalRotation],
+  planeMotion: [
+    PlaneMotion.Sagittal,
+    PlaneMotion.Frontal,
+    PlaneMotion.Transverse
+  ],
+  innervation: {
+    nerve: [InnervationNerves.Obturador],
+    root: [NerveRoots.l3, NerveRoots.l4]
+  }
+}
+
+const adductorLongus: Muscle = {
+  name: 'Adductor Longus',
+  origin: 'Anterior pubis just below its crest',
+  insertion: 'Middle 1/3 of the linea aspera',
+  action: [Action.HipFlexion, Action.HipAdduction],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Frontal],
+  innervation: {
+    nerve: [InnervationNerves.Obturador],
+    root: [NerveRoots.l3, NerveRoots.l4]
+  }
+}
+
+const adductorMagnus: Muscle = {
+  name: 'Adductor Magnus',
+  origin:
+    'Edge of the en- tire pubic ramus and the ischium and ischial tuberosity',
+  insertion:
+    'Whole length of the linea aspera, inner condyloid ridge, and adductor tubercle',
+  action: [
+    Action.HipExtension,
+    Action.HipAdduction,
+    Action.HipExternalRotation
+  ],
+  planeMotion: [
+    PlaneMotion.Sagittal,
+    PlaneMotion.Frontal,
+    PlaneMotion.Transverse
+  ],
+  innervation: {
+    nerve: [InnervationNerves.Obturador, InnervationNerves.Sciatic],
+    root: [
+      NerveRoots.l2,
+      NerveRoots.l3,
+      NerveRoots.l4,
+      NerveRoots.l5,
+      NerveRoots.s1,
+      NerveRoots.s2,
+      NerveRoots.s3
+    ]
+  }
+}
+
+const gracilis: Muscle = {
+  name: 'Gracilis',
+  origin: 'Anteromedial edge of the descending ramus of the pubis',
+  insertion: 'Anterior medial surface of the tibia below the condyle',
+  action: [
+    Action.HipFlexion,
+    Action.HipAdduction,
+    Action.HipInternalRotation,
+    Action.KneeInternalRotation,
+    Action.KneeFlexion
+  ],
+  planeMotion: [
+    PlaneMotion.Sagittal,
+    PlaneMotion.Frontal,
+    PlaneMotion.Transverse
+  ],
+  innervation: {
+    nerve: [InnervationNerves.Obturador],
+    root: [NerveRoots.l2, NerveRoots.l3, NerveRoots.l4]
+  }
+}
+
+const semitendinosus: Muscle = {
+  name: 'Semitendinosus',
+  origin: 'Ischial tuberosity',
+  insertion:
+    'Upper anterior medial surface of the tibia just below the condyle',
+  action: [
+    Action.HipExtension,
+    Action.HipInternalRotation,
+    Action.KneeInternalRotation,
+    Action.KneeFlexion,
+    Action.PelvicPosteriorRotation
+  ],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Transverse],
+  innervation: {
+    nerve: [InnervationNerves.Sciatic],
+    root: [NerveRoots.l5, NerveRoots.s1, NerveRoots.s2]
   }
 }
