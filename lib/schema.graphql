@@ -7,8 +7,12 @@ type Course {
 }
 
 type Muscle {
-  id: ID
   name: String
+  origin: String
+  insertion: String
+  action: [String]
+  planeMotion: [String]
+  innervation: String
 }
 
 type Material {
@@ -26,6 +30,6 @@ type Exercise {
 # Los query son las posibles consultas que puedo realizar a la API. Es decir, las funciones con las que puedo consultar datos a la base de datos.
 type Query {
   "Devuelve un array de elementos tipo Course"
-  getCourses: [Course]
-  getCourse(id: ID!): Course
+  getMuscles: [Muscle]
+  getMuscle(name: String!): Muscle
 }

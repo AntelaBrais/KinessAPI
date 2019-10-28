@@ -1,3 +1,4 @@
+const fs = require('fs')
 enum InnervationNerves {
   Musculocutaneous = 'Musculocutaneous nerve',
   Radial = 'Radial nerve',
@@ -855,3 +856,47 @@ const gluteusMinimus: Muscle = {
     root: [NerveRoots.l5, NerveRoots.s1, NerveRoots.l4]
   }
 }
+
+export const data: Array<Muscle> = [
+  adductorBrevis,
+  adductorLongus,
+  adductorMagnus,
+  anconeus,
+  bicepsBrachiLongHead,
+  bicepsBrachiShortHead,
+  bicepsFemoris,
+  brachialis,
+  brachioRadialis,
+  deltoidAnterior,
+  deltoidMiddle,
+  deltoidPosterior,
+  gluteusMaximus,
+  gluteusMedius,
+  gluteusMinimus,
+  gracilis,
+  iliacus,
+  infraSpinatus,
+  latissimusDorsi,
+  pectineus,
+  pectoralisMajorUpper,
+  pectoralisMajorLower,
+  pronatorQuadratus,
+  pronatorTeres,
+  psoas,
+  rectusFemoris,
+  sartorius,
+  semimembranosus,
+  semitendinosus,
+  subscapularis,
+  supinator,
+  supraSpinatus,
+  teresMajor,
+  teresMinor,
+  tricepsBrachiLateralHead,
+  tricepsBrachiLongHead,
+  tricepsBrachiMedialHead
+]
+
+// const dataObject = JSON.stringify(data, null, 2)
+
+// fs.writeFileSync('./test.json', dataObject)
