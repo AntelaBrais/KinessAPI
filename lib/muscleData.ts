@@ -12,7 +12,9 @@ enum InnervationNerves {
   Lumbar = 'Lumbar nerve',
   Femoral = 'Femoral nerve',
   Obturador = 'Obturador nerve',
-  Sciatic = 'Sciatic nerve'
+  Sciatic = 'Sciatic nerve',
+  InferiorGluteal = 'Inferior Gluteal nerve',
+  SuperiorGluteal = 'Superior Gluteal nerve'
 }
 
 enum NerveRoots {
@@ -85,13 +87,14 @@ enum Action {
 
   LumbarSpineFlexion = 'Flexion of the lumbar spine',
   LumbarSpineLateralFlexion = 'Lateral flexion of the lumbar spine',
-  PelvicLateralRotationContralateral = 'Lateral rotation of the pelvic to the contralateral side',
+  PelvicLateralRotation = 'Lateral rotation of the pelvic',
 
   PelvicPosteriorRotation = 'Posterior Rotation of the Pelvic',
 
   KneeExtension = 'Extension of the knee',
   KneeFlexion = 'Flexion of the knee',
   KneeInternalRotation = 'Internal rotation of the knee',
+  KneeExternalRotation = 'External rotation of the knee',
 
   ThighExternalRotation = 'External Rotation of the thigh'
 }
@@ -572,7 +575,7 @@ const psoas: Muscle = {
     Action.HipExternalRotation,
     Action.PelvicTransverseRotationContralaterallyFtabilizedFemur,
     Action.LumbarSpineLateralFlexion,
-    Action.PelvicLateralRotationContralateral
+    Action.PelvicLateralRotation
   ],
   planeMotion: [
     PlaneMotion.Sagittal,
@@ -741,5 +744,114 @@ const semitendinosus: Muscle = {
   innervation: {
     nerve: [InnervationNerves.Sciatic],
     root: [NerveRoots.l5, NerveRoots.s1, NerveRoots.s2]
+  }
+}
+
+const semimembranosus: Muscle = {
+  name: 'Semimembranosus',
+  origin: 'Ischial tuberosity',
+  insertion: 'Posteromedial surface of the medial tibial condyle',
+  action: [
+    Action.KneeFlexion,
+    Action.HipExtension,
+    Action.PelvicPosteriorRotation,
+    Action.HipInternalRotation,
+    Action.KneeInternalRotation
+  ],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Transverse],
+  innervation: {
+    nerve: [InnervationNerves.Sciatic],
+    root: [NerveRoots.l5, NerveRoots.s1, NerveRoots.s2]
+  }
+}
+
+const bicepsFemoris: Muscle = {
+  name: 'Biceps Femoris',
+  origin:
+    'Long head: ischial tuberosity. Short head: lower half of the linea aspera, and lateral condyloid ridge',
+  insertion: 'Head of the fibula and lateral condyle of the tibia',
+  action: [
+    Action.KneeFlexion,
+    Action.HipExtension,
+    Action.PelvicPosteriorRotation,
+    Action.HipExternalRotation,
+    Action.KneeExternalRotation
+  ],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Transverse],
+  innervation: {
+    nerve: [InnervationNerves.Sciatic],
+    root: [NerveRoots.l5, NerveRoots.s1, NerveRoots.s2, NerveRoots.s3]
+  }
+}
+
+const gluteusMaximus: Muscle = {
+  name: 'Gluteus Maximus',
+  origin:
+    'Posterior 1/4 of the crest of the ilium, posterior surface of the sacrum and coccyx near the ilium, and fascia of the lumbar area',
+  insertion:
+    'Oblique ridge on the lateral surface of the greater trochanter and the iliotibial band of the fasciae latae',
+  action: [
+    Action.HipExtension,
+    Action.PelvicPosteriorRotation,
+    Action.HipExternalRotation,
+    Action.HipAbduction,
+    Action.HipAdduction
+  ],
+  planeMotion: [
+    PlaneMotion.Sagittal,
+    PlaneMotion.Transverse,
+    PlaneMotion.Frontal
+  ],
+  innervation: {
+    nerve: [InnervationNerves.InferiorGluteal],
+    root: [NerveRoots.l5, NerveRoots.s1, NerveRoots.s2]
+  }
+}
+
+const gluteusMedius: Muscle = {
+  name: 'Gluteus Medius',
+  origin: 'Lateral surface of the ilium just below the crest',
+  insertion:
+    'Posterior and middle surfaces of the greater trochanter of the femur',
+  action: [
+    Action.HipAbduction,
+    Action.HipExtension,
+    Action.HipFlexion,
+    Action.PelvicPosteriorRotation,
+    Action.AnteriorPelvicRotation,
+    Action.HipInternalRotation,
+    Action.HipExternalRotation
+  ],
+  planeMotion: [
+    PlaneMotion.Sagittal,
+    PlaneMotion.Transverse,
+    PlaneMotion.Frontal
+  ],
+  innervation: {
+    nerve: [InnervationNerves.SuperiorGluteal],
+    root: [NerveRoots.l5, NerveRoots.s1, NerveRoots.l4]
+  }
+}
+
+const gluteusMinimus: Muscle = {
+  name: 'Gluteus Minimus',
+  origin:
+    'Lateral surface of the ilium just below the origin of the gluteus medius',
+  insertion: 'Anterior surface of the greater trochanter of the femur',
+  action: [
+    Action.HipAbduction,
+    Action.PelvicLateralRotation,
+    Action.HipInternalRotation,
+    Action.HipFlexion,
+    Action.AnteriorPelvicRotation
+  ],
+  planeMotion: [
+    PlaneMotion.Sagittal,
+    PlaneMotion.Transverse,
+    PlaneMotion.Frontal
+  ],
+  innervation: {
+    nerve: [InnervationNerves.SuperiorGluteal],
+    root: [NerveRoots.l5, NerveRoots.s1, NerveRoots.l4]
   }
 }
