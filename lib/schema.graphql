@@ -6,13 +6,18 @@ type Course {
   topic: String
 }
 
+type Innervation {
+  nerve: [String]
+  root: [String]
+}
+
 type Muscle {
   name: String
   origin: String
   insertion: String
   action: [String]
   planeMotion: [String]
-  innervation: String
+  innervation: Innervation
 }
 
 # Los query son las posibles consultas que puedo realizar a la API. Es decir, las funciones con las que puedo consultar datos a la base de datos.
@@ -21,6 +26,7 @@ type Query {
   getMuscles: [Muscle]
   getMusclesByName(name: String!): [Muscle]
   getMusclesByAction(action: String!): [Muscle]
+  getMusclesByNerve(nerve: String!): [Muscle]
   getActions: [String]
   getNerveRoots: [String]
   getPlanesOfMotion: [String]

@@ -41,10 +41,19 @@ export const resolvers = {
     },
     getMusclesByAction: (root, args) => {
       const muscles = data.filter((muscle) => {
-        let actionsMuscle = muscle.action.find((action) =>
+        let actionsOfMuscle = muscle.action.find((action) =>
           action.includes(args.action)
         )
-        return actionsMuscle
+        return actionsOfMuscle
+      })
+
+      return muscles
+    },
+    getMusclesByNerve: (root, args) => {
+      const muscles = data.filter((muscle) => {
+        let muscleNerve = muscle.innervation.nerve.toString()
+
+        return muscleNerve.toUpperCase().includes(args.nerve.toUpperCase())
       })
 
       return muscles
