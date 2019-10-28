@@ -58,6 +58,15 @@ export const resolvers = {
 
       return muscles
     },
+    getMusclesByNerveRoot: (root, args) => {
+      const muscles = data.filter((muscle) => {
+        let muscleNerveRoot = muscle.innervation.root.toString()
+
+        return muscleNerveRoot.toUpperCase().includes(args.root.toUpperCase())
+      })
+
+      return muscles
+    },
     getActions: () => {
       return Object.keys(Action)
     },

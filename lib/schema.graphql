@@ -27,6 +27,7 @@ type Query {
   getMusclesByName(name: String!): [Muscle]
   getMusclesByAction(action: String!): [Muscle]
   getMusclesByNerve(nerve: String!): [Muscle]
+  getMusclesByNerveRoot(root: String!): [Muscle]
   getActions: [String]
   getNerveRoots: [String]
   getPlanesOfMotion: [String]
