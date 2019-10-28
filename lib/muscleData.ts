@@ -1,5 +1,5 @@
 const fs = require('fs')
-enum InnervationNerves {
+export enum InnervationNerves {
   Musculocutaneous = 'Musculocutaneous nerve',
   Radial = 'Radial nerve',
   Median = 'Median nerve',
@@ -18,7 +18,7 @@ enum InnervationNerves {
   SuperiorGluteal = 'Superior Gluteal nerve'
 }
 
-enum NerveRoots {
+export enum NerveRoots {
   c1 = 'C1',
   c2 = 'C2',
   c3 = 'C3',
@@ -54,7 +54,7 @@ interface Innervation {
   root: Array<NerveRoots>
 }
 
-enum Action {
+export enum Action {
   ForearmSupination = 'Supination of the forearm',
   ForearmPronation = 'Pronation of the forearm',
 
@@ -100,7 +100,7 @@ enum Action {
   ThighExternalRotation = 'External Rotation of the thigh'
 }
 
-enum PlaneMotion {
+export enum PlaneMotion {
   Transverse = 'Transverse',
   Sagittal = 'Sagittal',
   Frontal = 'Frontal',

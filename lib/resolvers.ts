@@ -1,7 +1,13 @@
 // Los resolvers son las funciones que se encargan de resolver la petición (Query) realizada. Un ejemplo metafórico sería una oficina de paquetería, donde llega una persona al mostrador, hace una consulta con el paquete (data) que quiere, el resolver es la persona que se encarga de ir a buscar el paquete a la zona del almacén y traerlo de vuelta a la persona. Los resolvers entiendes determinadas consultas. Cuando llegas a la oficina de paquetería hay unas reglas de cómo pedir tu paquete, esas normas están escritas en las Query. Los resolvers solo entienden esas Query especificadas.
 
 // import { db } from './db'
-import { data } from './muscleData'
+import {
+  data,
+  Action,
+  InnervationNerves,
+  PlaneMotion,
+  NerveRoots
+} from './muscleData'
 
 export const resolvers = {
   Query: {
@@ -24,13 +30,36 @@ export const resolvers = {
     getMuscles: (root, args) => {
       return data
     },
-    getMuscle: (root, args) => {
-      const muscle = data.find((muscle) => {
+    getMusclesByName: (root, args) => {
+      const muscles = data.filter((muscle) => {
         let name = muscle.name.toUpperCase()
         let argsName = args.name.toUpperCase()
         return name.includes(argsName)
       })
-      return muscle
+
+      return muscles
+    },
+    getMusclesByAction: (root, args) => {
+      const muscles = data.filter((muscle) => {
+        let actionsMuscle = muscle.action.find((action) =>
+          action.includes(args.action)
+        )
+        return actionsMuscle
+      })
+
+      return muscles
+    },
+    getActions: () => {
+      return Object.keys(Action)
+    },
+    getNerveRoots: () => {
+      return Object.keys(NerveRoots)
+    },
+    getPlanesOfMotion: () => {
+      return Object.keys(PlaneMotion)
+    },
+    getInnervationNerves: () => {
+      return Object.keys(InnervationNerves)
     }
   }
 }
