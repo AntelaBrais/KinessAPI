@@ -27,17 +27,17 @@ export const resolvers = {
     //     })
     //   return courses
     // },
-    getMuscles: (root, args) => {
-      return data
-    },
-    getMusclesByName: (root, args) => {
-      const muscles = data.filter((muscle) => {
-        let name = muscle.name.toUpperCase()
-        let argsName = args.name.toUpperCase()
-        return name.includes(argsName)
-      })
-
-      return muscles
+    Muscles: (root, args) => {
+      if (Object.entries(args).length === 0) {
+        return data
+      } else if (Object.entries(args).length !== 0) {
+        const muscles = data.filter((muscle) => {
+          let name = muscle.name.toUpperCase()
+          let argsName = args.name.toUpperCase()
+          return name.includes(argsName)
+        })
+        return muscles
+      }
     },
     getMusclesByAction: (root, args) => {
       const muscles = data.filter((muscle) => {
@@ -79,17 +79,47 @@ export const resolvers = {
 
       return muscles
     },
-    getActions: () => {
-      return Object.keys(Action)
+    Actions: (root, args) => {
+      if (!args.name) {
+        return Object.keys(Action)
+      } else if (args.name) {
+        let actionValues = Object.values(Action)
+        const actions = actionValues.filter((action) => {
+          let name = action.toUpperCase()
+          let argsName = args.name.toUpperCase()
+          return name.includes(argsName)
+        })
+        return actions
+      }
     },
-    getNerveRoots: () => {
-      return Object.keys(NerveRoots)
+    InnervationNerves: (root, args) => {
+      if (!args.name) {
+        return Object.keys(InnervationNerves)
+      } else if (args.name) {
+        let nerveValues = Object.values(InnervationNerves)
+        const nerves = nerveValues.filter((nerve) => {
+          let name = nerve.toUpperCase()
+          let argsName = args.name.toUpperCase()
+          return name.includes(argsName)
+        })
+        return nerves
+      }
     },
-    getPlanesOfMotion: () => {
+    NerveRoots: (root, args) => {
+      if (!args.name) {
+        return Object.keys(NerveRoots)
+      } else if (args.name) {
+        let rootValues = Object.values(NerveRoots)
+        const roots = rootValues.filter((root) => {
+          let name = root.toUpperCase()
+          let argsName = args.name.toUpperCase()
+          return name.includes(argsName)
+        })
+        return roots
+      }
+    },
+    PlanesOfMotion: () => {
       return Object.keys(PlaneMotion)
-    },
-    getInnervationNerves: () => {
-      return Object.keys(InnervationNerves)
     }
   }
 }

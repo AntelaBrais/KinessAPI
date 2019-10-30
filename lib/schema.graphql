@@ -24,13 +24,13 @@ type Muscle {
 type Query {
   "Devuelve un array de elementos tipo Course"
   getMuscles: [Muscle]
-  getMusclesByName(name: String!): [Muscle]
+  Muscles(name: String): [Muscle]
   getMusclesByAction(action: String!): [Muscle]
   getMusclesByPlaneOfMotion(plane: String!): [Muscle]
   getMusclesByNerve(nerve: String!): [Muscle]
   getMusclesByNerveRoot(root: String!): [Muscle]
-  getActions: [String]
-  getNerveRoots: [String]
-  getPlanesOfMotion: [String]
-  getInnervationNerves: [String]
+  Actions(name: String): [String]
+  NerveRoots(name: String): [String]
+  PlanesOfMotion(name: String): [Muscle]
+  InnervationNerves(name: String): [String]
 }
