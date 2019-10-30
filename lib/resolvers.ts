@@ -118,8 +118,18 @@ export const resolvers = {
         return roots
       }
     },
-    PlanesOfMotion: () => {
-      return Object.keys(PlaneMotion)
+    PlanesOfMotion: (root, args) => {
+      if (!args.name) {
+        return Object.keys(PlaneMotion)
+      } else if (args.name) {
+        let planeValues = Object.values(PlaneMotion)
+        const planes = planeValues.filter((plane) => {
+          let name = plane.toUpperCase()
+          let argsName = args.name.toUpperCase()
+          return name.includes(argsName)
+        })
+        return planes
+      }
     }
   }
 }

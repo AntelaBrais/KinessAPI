@@ -31,6 +31,6 @@ type Query {
   getMusclesByNerveRoot(root: String!): [Muscle]
   Actions(name: String): [String]
   NerveRoots(name: String): [String]
-  PlanesOfMotion(name: String): [Muscle]
+  PlanesOfMotion(name: String): [String]
   InnervationNerves(name: String): [String]
 }
