@@ -49,6 +49,18 @@ export const resolvers = {
 
       return muscles
     },
+    getMusclesByPlaneOfMotion: (root, args) => {
+      const muscles = data.filter((muscle) => {
+        let planesOfMuscle = muscle.planeMotion.find((plane) => {
+          let musclePlane = plane.toUpperCase()
+          let argsPlane = args.plane.toUpperCase()
+          return musclePlane.includes(argsPlane)
+        })
+        return planesOfMuscle
+      })
+
+      return muscles
+    },
     getMusclesByNerve: (root, args) => {
       const muscles = data.filter((muscle) => {
         let muscleNerve = muscle.innervation.nerve.toString()

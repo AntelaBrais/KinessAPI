@@ -15,7 +15,12 @@ export enum InnervationNerves {
   Obturador = 'Obturador nerve',
   Sciatic = 'Sciatic nerve',
   InferiorGluteal = 'Inferior Gluteal nerve',
-  SuperiorGluteal = 'Superior Gluteal nerve'
+  SuperiorGluteal = 'Superior Gluteal nerve',
+  FirstSacral = 'First Sacral Nerve',
+  SecondSacral = 'Second Sacral Nerve',
+  Sacral = 'Sacral nerve',
+  SacralPlexus = 'Sacral Plexus nerve',
+  Tibial = 'Tibial nerve'
 }
 
 export enum NerveRoots {
@@ -50,7 +55,7 @@ export enum NerveRoots {
 }
 
 interface Innervation {
-  nerve: InnervationNerves | Array<InnervationNerves>
+  nerve: Array<InnervationNerves>
   root: Array<NerveRoots>
 }
 
@@ -133,7 +138,7 @@ const bicepsBrachiLongHead: Muscle = {
     PlaneMotion.Transverse
   ],
   innervation: {
-    nerve: InnervationNerves.Musculocutaneous,
+    nerve: [InnervationNerves.Musculocutaneous],
     root: [NerveRoots.c5, NerveRoots.c6]
   }
 }
@@ -156,7 +161,7 @@ const bicepsBrachiShortHead: Muscle = {
     PlaneMotion.Transverse
   ],
   innervation: {
-    nerve: InnervationNerves.Musculocutaneous,
+    nerve: [InnervationNerves.Musculocutaneous],
     root: [NerveRoots.c5, NerveRoots.c6]
   }
 }
@@ -173,7 +178,7 @@ const brachialis: Muscle = {
   action: [Action.ElbowFlexion],
   planeMotion: [PlaneMotion.Sagittal],
   innervation: {
-    nerve: InnervationNerves.Musculocutaneous,
+    nerve: [InnervationNerves.Musculocutaneous],
     root: [NerveRoots.c5, NerveRoots.c6]
   }
 }
@@ -191,7 +196,7 @@ const brachioRadialis: Muscle = {
   ],
   planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Transverse],
   innervation: {
-    nerve: InnervationNerves.Radial,
+    nerve: [InnervationNerves.Radial],
     root: [NerveRoots.c5, NerveRoots.c6]
   }
 }
@@ -204,7 +209,7 @@ const pronatorTeres: Muscle = {
   action: [Action.ElbowFlexion, Action.ForearmPronation],
   planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Transverse],
   innervation: {
-    nerve: InnervationNerves.Median,
+    nerve: [InnervationNerves.Median],
     root: [NerveRoots.c7, NerveRoots.c6]
   }
 }
@@ -216,7 +221,7 @@ const pronatorQuadratus: Muscle = {
   action: [Action.ForearmPronation],
   planeMotion: [PlaneMotion.Transverse],
   innervation: {
-    nerve: InnervationNerves.Median,
+    nerve: [InnervationNerves.Median],
     root: [NerveRoots.c7, NerveRoots.c6]
   }
 }
@@ -238,7 +243,7 @@ const tricepsBrachiLongHead: Muscle = {
     PlaneMotion.Sagittal
   ],
   innervation: {
-    nerve: InnervationNerves.Radial,
+    nerve: [InnervationNerves.Radial],
     root: [NerveRoots.c7, NerveRoots.c8]
   }
 }
@@ -250,7 +255,7 @@ const tricepsBrachiLateralHead: Muscle = {
   action: [Action.ElbowExtension],
   planeMotion: [PlaneMotion.Sagittal],
   innervation: {
-    nerve: InnervationNerves.Radial,
+    nerve: [InnervationNerves.Radial],
     root: [NerveRoots.c7, NerveRoots.c8]
   }
 }
@@ -262,7 +267,7 @@ const tricepsBrachiMedialHead: Muscle = {
   action: [Action.ElbowExtension],
   planeMotion: [PlaneMotion.Sagittal],
   innervation: {
-    nerve: InnervationNerves.Radial,
+    nerve: [InnervationNerves.Radial],
     root: [NerveRoots.c7, NerveRoots.c8]
   }
 }
@@ -275,7 +280,7 @@ const supinator: Muscle = {
   action: [Action.ForearmSupination],
   planeMotion: [PlaneMotion.Transverse],
   innervation: {
-    nerve: InnervationNerves.Radial,
+    nerve: [InnervationNerves.Radial],
     root: [NerveRoots.c6]
   }
 }
@@ -288,7 +293,7 @@ const anconeus: Muscle = {
   action: [Action.ElbowExtension],
   planeMotion: [PlaneMotion.Sagittal],
   innervation: {
-    nerve: InnervationNerves.Radial,
+    nerve: [InnervationNerves.Radial],
     root: [NerveRoots.c7, NerveRoots.c8]
   }
 }
@@ -312,7 +317,7 @@ const pectoralisMajorUpper: Muscle = {
     PlaneMotion.Diagonal
   ],
   innervation: {
-    nerve: InnervationNerves.LateralPectoral,
+    nerve: [InnervationNerves.LateralPectoral],
     root: [NerveRoots.c5, NerveRoots.c6, NerveRoots.c7]
   }
 }
@@ -337,7 +342,7 @@ const pectoralisMajorLower: Muscle = {
     PlaneMotion.Diagonal
   ],
   innervation: {
-    nerve: InnervationNerves.MedialPectoral,
+    nerve: [InnervationNerves.MedialPectoral],
     root: [NerveRoots.c8, NerveRoots.t1]
   }
 }
@@ -380,7 +385,7 @@ const coracoBrachialis: Muscle = {
   ],
   planeMotion: [PlaneMotion.Diagonal, PlaneMotion.Transverse],
   innervation: {
-    nerve: InnervationNerves.Musculocutaneous,
+    nerve: [InnervationNerves.Musculocutaneous],
     root: [NerveRoots.c5, NerveRoots.c6, NerveRoots.c7]
   }
 }
@@ -403,7 +408,7 @@ const deltoidAnterior: Muscle = {
     PlaneMotion.Sagittal
   ],
   innervation: {
-    nerve: InnervationNerves.Axillary,
+    nerve: [InnervationNerves.Axillary],
     root: [NerveRoots.c5, NerveRoots.c6]
   }
 }
@@ -415,7 +420,7 @@ const deltoidMiddle: Muscle = {
   action: [Action.ShoulderAbduction, Action.ShoulderHorizontalAbduction],
   planeMotion: [PlaneMotion.Transverse, PlaneMotion.Frontal],
   innervation: {
-    nerve: InnervationNerves.Axillary,
+    nerve: [InnervationNerves.Axillary],
     root: [NerveRoots.c5, NerveRoots.c6]
   }
 }
@@ -436,7 +441,7 @@ const deltoidPosterior: Muscle = {
     PlaneMotion.Diagonal
   ],
   innervation: {
-    nerve: InnervationNerves.Axillary,
+    nerve: [InnervationNerves.Axillary],
     root: [NerveRoots.c5, NerveRoots.c6]
   }
 }
@@ -454,7 +459,7 @@ const supraSpinatus: Muscle = {
   action: [Action.ShoulderAbduction],
   planeMotion: [PlaneMotion.Frontal],
   innervation: {
-    nerve: InnervationNerves.Suprascapula,
+    nerve: [InnervationNerves.Suprascapula],
     root: [NerveRoots.c5]
   }
 }
@@ -477,7 +482,7 @@ const latissimusDorsi: Muscle = {
     PlaneMotion.Transverse
   ],
   innervation: {
-    nerve: InnervationNerves.Suprascapula,
+    nerve: [InnervationNerves.Suprascapula],
     root: [NerveRoots.c6, NerveRoots.c7, NerveRoots.c8]
   }
 }
@@ -499,7 +504,7 @@ const teresMajor: Muscle = {
     PlaneMotion.Transverse
   ],
   innervation: {
-    nerve: InnervationNerves.LowerSubscapular,
+    nerve: [InnervationNerves.LowerSubscapular],
     root: [NerveRoots.c5, NerveRoots.c6]
   }
 }
@@ -520,7 +525,7 @@ const infraSpinatus: Muscle = {
     PlaneMotion.Transverse
   ],
   innervation: {
-    nerve: InnervationNerves.Suprascapula,
+    nerve: [InnervationNerves.Suprascapula],
     root: [NerveRoots.c5, NerveRoots.c6]
   }
 }
@@ -541,7 +546,7 @@ const teresMinor: Muscle = {
     PlaneMotion.Transverse
   ],
   innervation: {
-    nerve: InnervationNerves.Axillary,
+    nerve: [InnervationNerves.Axillary],
     root: [NerveRoots.c5, NerveRoots.c6]
   }
 }
@@ -592,7 +597,7 @@ const psoas: Muscle = {
 const rectusFemoris: Muscle = {
   name: 'Rectus Femoris',
   origin:
-    'Anterior inferior iliac spine of the ilium and groove (poste- rior) above the acetabulum',
+    'Anterior inferior iliac spine of the ilium and groove (posteior) above the acetabulum',
   insertion:
     'Superior aspect of the patella and patella tendon to the tibial tuberosity',
   action: [
@@ -857,6 +862,169 @@ const gluteusMinimus: Muscle = {
   }
 }
 
+const tensorFasciaeLatae: Muscle = {
+  name: 'Tensor Fasciae Latae',
+  origin: 'Anterior iliac crest and surface of the ilium just below the crest',
+  insertion:
+    'One-fourth of the way down the thigh into the iliotibial tract, which in turn inserts onto Gerdy’s tubercle of the anterolateral tibial condyle',
+  action: [
+    Action.HipAbduction,
+    Action.PelvicLateralRotation,
+    Action.HipInternalRotation,
+    Action.HipFlexion,
+    Action.AnteriorPelvicRotation
+  ],
+  planeMotion: [
+    PlaneMotion.Sagittal,
+    PlaneMotion.Transverse,
+    PlaneMotion.Frontal
+  ],
+  innervation: {
+    nerve: [InnervationNerves.SuperiorGluteal],
+    root: [NerveRoots.l5, NerveRoots.s1, NerveRoots.l4]
+  }
+}
+
+const piriformis: Muscle = {
+  name: 'Piriformis',
+  origin:
+    'Anterior sacrum, posterior portions of the ischium, and obturator foramen',
+  insertion: 'Superior and posterior aspect of the greater trochanter',
+  action: [Action.HipExternalRotation],
+  planeMotion: [PlaneMotion.Transverse],
+  innervation: {
+    nerve: [InnervationNerves.FirstSacral, InnervationNerves.SecondSacral],
+    root: [NerveRoots.s1, NerveRoots.s2]
+  }
+}
+
+const gemellusSuperior: Muscle = {
+  name: 'Gemellus Superior',
+  origin: 'Ischial Spine',
+  insertion:
+    'Posterior aspect of the greater trochanter immediately below piriformis',
+  action: [Action.HipExternalRotation],
+  planeMotion: [PlaneMotion.Transverse],
+  innervation: {
+    nerve: [InnervationNerves.Sacral],
+    root: [NerveRoots.s1, NerveRoots.s2, NerveRoots.l5]
+  }
+}
+
+const gemellusInferior: Muscle = {
+  name: 'Gemellus Inferior',
+  origin: 'Ischial tuberosity',
+  insertion:
+    'Posterior aspect of the greater trochanter with obturator internus',
+  action: [Action.HipExternalRotation],
+  planeMotion: [PlaneMotion.Transverse],
+  innervation: {
+    nerve: [InnervationNerves.Sacral],
+    root: [NerveRoots.l4, NerveRoots.l5, NerveRoots.s1, NerveRoots.s2]
+  }
+}
+
+const obturatorInternus: Muscle = {
+  name: 'Obturator Internus',
+  origin: 'Margin of obturator foramen',
+  insertion:
+    'Posterior aspect of the greater trochanter with gamellus superior',
+  action: [Action.HipExternalRotation],
+  planeMotion: [PlaneMotion.Transverse],
+  innervation: {
+    nerve: [InnervationNerves.Sacral],
+    root: [NerveRoots.l4, NerveRoots.l5, NerveRoots.s1, NerveRoots.s2]
+  }
+}
+
+const obturatorExternus: Muscle = {
+  name: 'Obturator Externus',
+  origin: 'Inferior margin of obturator foramen',
+  insertion:
+    'Posterior aspect of the greater trochanter immediately below obturator internus',
+  action: [Action.HipExternalRotation],
+  planeMotion: [PlaneMotion.Transverse],
+  innervation: {
+    nerve: [InnervationNerves.Sacral],
+    root: [NerveRoots.l3, NerveRoots.l4]
+  }
+}
+
+const quadratusFemoris: Muscle = {
+  name: 'Quadratus Femoris',
+  origin: 'Ischial tuberosity',
+  insertion: 'Intertrochanteric ridge of femur',
+  action: [Action.HipExternalRotation],
+  planeMotion: [PlaneMotion.Transverse],
+  innervation: {
+    nerve: [InnervationNerves.SacralPlexus],
+    root: [NerveRoots.l4, NerveRoots.l5, NerveRoots.s1]
+  }
+}
+
+const vastusIntermedius: Muscle = {
+  name: 'Vastus Intermedius',
+  origin: 'Upper 2/3 of anterior surface of femur',
+  insertion:
+    'Upper border of the patella and patellar tendon to tibial tuberosity',
+  action: [Action.KneeExtension],
+  planeMotion: [PlaneMotion.Sagittal],
+  innervation: {
+    nerve: [InnervationNerves.Femoral],
+    root: [NerveRoots.l2, NerveRoots.l4]
+  }
+}
+
+const vastusLateralis: Muscle = {
+  name: 'Vastus Lateralis',
+  origin:
+    'Intertrochanteric line, anterior and inferior borders of the greater trochanter, gluteal tuberosity, upper half of the linea aspera, and entire lateral intermuscular septum',
+  insertion:
+    'Lateral border of the patella and patellar tendon to tibial tuberosity',
+  action: [Action.KneeExtension],
+  planeMotion: [PlaneMotion.Sagittal],
+  innervation: {
+    nerve: [InnervationNerves.Femoral],
+    root: [NerveRoots.l2, NerveRoots.l4]
+  }
+}
+
+const vastusMedialis: Muscle = {
+  name: 'Vastus Medialis',
+  origin: 'Whole length of linea aspera and medial condyloid ridge',
+  insertion:
+    'Medial half of upper border of patella and patellar tendon to tibial tuberosity',
+  action: [Action.KneeExtension],
+  planeMotion: [PlaneMotion.Sagittal],
+  innervation: {
+    nerve: [InnervationNerves.Femoral],
+    root: [NerveRoots.l2, NerveRoots.l4]
+  }
+}
+
+const popliteus: Muscle = {
+  name: 'Popliteus',
+  origin: 'Posterior surface of lateral condyle of femur',
+  insertion: 'Upper posterior medial surface of tibia',
+  action: [Action.KneeFlexion, Action.KneeInternalRotation],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Transverse],
+  innervation: {
+    nerve: [InnervationNerves.Tibial],
+    root: [NerveRoots.s1, NerveRoots.l5]
+  }
+}
+
+const gastrocnemius: Muscle = {
+  name: 'Gastrocnemius',
+  origin: 'Posterior surface of lateral condyle of femur',
+  insertion: 'Upper posterior medial surface of tibia',
+  action: [Action.KneeFlexion, Action.KneeInternalRotation],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Transverse],
+  innervation: {
+    nerve: [InnervationNerves.Tibial],
+    root: [NerveRoots.s1, NerveRoots.s2]
+  }
+}
 export const data: Array<Muscle> = [
   adductorBrevis,
   adductorLongus,
@@ -894,7 +1062,19 @@ export const data: Array<Muscle> = [
   teresMinor,
   tricepsBrachiLateralHead,
   tricepsBrachiLongHead,
-  tricepsBrachiMedialHead
+  tricepsBrachiMedialHead,
+  vastusMedialis,
+  vastusLateralis,
+  vastusIntermedius,
+  popliteus,
+  quadratusFemoris,
+  obturatorExternus,
+  obturatorInternus,
+  gemellusInferior,
+  gemellusSuperior,
+  piriformis,
+  tensorFasciaeLatae,
+  coracoBrachialis
 ]
 
 // const dataObject = JSON.stringify(data, null, 2)
