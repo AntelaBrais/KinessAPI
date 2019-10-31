@@ -19,7 +19,9 @@ export enum InnervationNerves {
   FirstSacral = 'First Sacral Nerve',
   SecondSacral = 'Second Sacral Nerve',
   Sacral = 'Sacral nerve',
+  Pudental = 'Pudental nerve',
   SacralPlexus = 'Sacral Plexus nerve',
+  PosteriorCutaneousFemoral = 'Posterior Cutaneous Femoral nerve',
   Tibial = 'Tibial nerve'
 }
 
@@ -957,7 +959,11 @@ const quadratusFemoris: Muscle = {
   action: [Action.HipExternalRotation],
   planeMotion: [PlaneMotion.Transverse],
   innervation: {
-    nerve: [InnervationNerves.SacralPlexus],
+    nerve: [
+      InnervationNerves.Pudental,
+      InnervationNerves.Sciatic,
+      InnervationNerves.PosteriorCutaneousFemoral
+    ],
     root: [NerveRoots.l4, NerveRoots.l5, NerveRoots.s1]
   }
 }

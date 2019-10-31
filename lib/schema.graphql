@@ -22,13 +22,14 @@ type Muscle {
 
 # Los query son las posibles consultas que puedo realizar a la API. Es decir, las funciones con las que puedo consultar datos a la base de datos.
 type Query {
-  "Devuelve un array de elementos tipo Course"
-  getMuscles: [Muscle]
-  Muscles(name: String): [Muscle]
-  getMusclesByAction(action: String!): [Muscle]
-  getMusclesByPlaneOfMotion(plane: String!): [Muscle]
-  getMusclesByNerve(nerve: String!): [Muscle]
-  getMusclesByNerveRoot(root: String!): [Muscle]
+  "Devuelve una lista de músculos que cumplan los parámetros indicados"
+  Muscles(
+    name: String
+    origin: String
+    insertion: String
+    nerve: String
+    root: String
+  ): [Muscle]
   Actions(name: String): [String]
   NerveRoots(name: String): [String]
   PlanesOfMotion(name: String): [String]

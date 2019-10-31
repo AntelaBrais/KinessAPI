@@ -29,55 +29,66 @@ export const resolvers = {
     // },
     Muscles: (root, args) => {
       if (Object.entries(args).length === 0) {
+        console.log('Cero')
         return data
       } else if (Object.entries(args).length !== 0) {
-        const muscles = data.filter((muscle) => {
-          let name = muscle.name.toUpperCase()
-          let argsName = args.name.toUpperCase()
-          return name.includes(argsName)
-        })
+        console.log('No Cero')
+        let muscles = data
+
+        if (args.name) {
+          muscles = muscles.filter((muscle) => {
+            let property = muscle.name.toUpperCase()
+            let argsProperty = args.name.toUpperCase()
+            return property.includes(argsProperty)
+          })
+        }
+
+        if (args.origin) {
+          muscles = muscles.filter((muscle) => {
+            let property = muscle.origin.toUpperCase()
+            let argsProperty = args.origin.toUpperCase()
+            return property.includes(argsProperty)
+          })
+        }
+
+        if (args.insertion) {
+          muscles = muscles.filter((muscle) => {
+            let property = muscle.insertion.toUpperCase()
+            let argsProperty = args.insertion.toUpperCase()
+            return property.includes(argsProperty)
+          })
+        }
+
+        if (args.plane) {
+          muscles = muscles.filter((muscle) => {
+            let planesOfMuscle = muscle.planeMotion.find((plane) => {
+              let musclePlane = plane.toUpperCase()
+              let argsPlane = args.plane.toUpperCase()
+              return musclePlane.includes(argsPlane)
+            })
+            return planesOfMuscle
+          })
+        }
+
+        if (args.root) {
+          muscles = muscles.filter((muscle) => {
+            let muscleNerveRoot = muscle.innervation.root.toString()
+
+            return muscleNerveRoot
+              .toUpperCase()
+              .includes(args.root.toUpperCase())
+          })
+        }
+
+        if (args.nerve) {
+          muscles = muscles.filter((muscle) => {
+            let muscleNerve = muscle.innervation.nerve.toString()
+            return muscleNerve.toUpperCase().includes(args.nerve.toUpperCase())
+          })
+        }
+
         return muscles
       }
-    },
-    getMusclesByAction: (root, args) => {
-      const muscles = data.filter((muscle) => {
-        let actionsOfMuscle = muscle.action.find((action) =>
-          action.includes(args.action)
-        )
-        return actionsOfMuscle
-      })
-
-      return muscles
-    },
-    getMusclesByPlaneOfMotion: (root, args) => {
-      const muscles = data.filter((muscle) => {
-        let planesOfMuscle = muscle.planeMotion.find((plane) => {
-          let musclePlane = plane.toUpperCase()
-          let argsPlane = args.plane.toUpperCase()
-          return musclePlane.includes(argsPlane)
-        })
-        return planesOfMuscle
-      })
-
-      return muscles
-    },
-    getMusclesByNerve: (root, args) => {
-      const muscles = data.filter((muscle) => {
-        let muscleNerve = muscle.innervation.nerve.toString()
-
-        return muscleNerve.toUpperCase().includes(args.nerve.toUpperCase())
-      })
-
-      return muscles
-    },
-    getMusclesByNerveRoot: (root, args) => {
-      const muscles = data.filter((muscle) => {
-        let muscleNerveRoot = muscle.innervation.root.toString()
-
-        return muscleNerveRoot.toUpperCase().includes(args.root.toUpperCase())
-      })
-
-      return muscles
     },
     Actions: (root, args) => {
       if (!args.name) {
