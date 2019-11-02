@@ -2,7 +2,7 @@
 
 // import { db } from './db'
 import {
-  data,
+  Effectors,
   Action,
   InnervationNerves,
   PlaneMotion,
@@ -30,10 +30,10 @@ export const resolvers = {
     Muscles: (root, args) => {
       if (Object.entries(args).length === 0) {
         console.log('Cero')
-        return data
+        return Effectors
       } else if (Object.entries(args).length !== 0) {
         console.log('No Cero')
-        let muscles = data
+        let muscles = Effectors
 
         if (args.name) {
           muscles = muscles.filter((muscle) => {

@@ -1031,7 +1031,7 @@ const gastrocnemius: Muscle = {
     root: [NerveRoots.s1, NerveRoots.s2]
   }
 }
-export const data: Array<Muscle> = [
+export const Effectors: Array<Muscle> = [
   adductorBrevis,
   adductorLongus,
   adductorMagnus,
