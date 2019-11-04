@@ -1031,6 +1031,7 @@ const gastrocnemius: Muscle = {
     root: [NerveRoots.s1, NerveRoots.s2]
   }
 }
+
 export const Effectors: Array<Muscle> = [
   adductorBrevis,
   adductorLongus,
@@ -1039,6 +1040,7 @@ export const Effectors: Array<Muscle> = [
   bicepsBrachiLongHead,
   bicepsBrachiShortHead,
   bicepsFemoris,
+  gastrocnemius,
   brachialis,
   brachioRadialis,
   deltoidAnterior,
@@ -1083,6 +1085,27 @@ export const Effectors: Array<Muscle> = [
   coracoBrachialis
 ]
 
-// const dataObject = JSON.stringify(data, null, 2)
+let effectorsObject: any = {}
+function createEffectorsObject(effectorsData) {
+  effectorsData.map((element) => {
+    let el: any = {
+      name: element.name,
+      origin: element.origin,
+      insertion: element.insertion,
+      action: element.action,
+      planeMotion: element.planeMotion,
+      innervation: {
+        nerve: element.innervation.nerve,
+        root: element.innervation.root
+      }
+    }
 
-// fs.writeFileSync('./test.json', dataObject)
+    effectorsObject[element.name] = el
+  })
+}
+
+export const mandan = createEffectorsObject(Effectors)
+
+const dataObject = JSON.stringify(effectorsObject, null, 2)
+
+fs.writeFileSync('./lib/test.json', dataObject)
