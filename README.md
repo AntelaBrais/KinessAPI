@@ -17,7 +17,7 @@ Imagina querer saber cuáles son los nervios que inervan el bíceps braquial, o 
 
 ```graphql
 {
-  getEffector(name: "Biceps Brachii Short Head") {
+  Muscles(name: "Biceps Brachii Short Head") {
     insertion
     action
   }

@@ -13,14 +13,12 @@ interface Muscle {
 }
 
 interface Exercise {
-  id: string
   reference: string
   name: string
   effectors: Array<Muscle>
 }
 
 const e1_11: Exercise = {
-  id: 'zmxncb4jshbdj',
   reference: '1_11',
   name: 'Press Banca',
   effectors: [
