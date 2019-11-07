@@ -1,11 +1,3 @@
-type Course {
-  id: ID!
-  title: String!
-  teacher: String
-  description: String!
-  topic: String
-}
-
 type Innervation {
   nerve: [String]
   root: [String]
@@ -29,9 +21,11 @@ type Query {
     insertion: String
     nerve: String
     root: String
+    plane: String
+    action: String
   ): [Muscle]
   Actions(name: String): [String]
   NerveRoots(name: String): [String]
   PlanesOfMotion(name: String): [String]
-  InnervationNerves(name: String): [String]
+  Nerves(name: String): [String]
 }

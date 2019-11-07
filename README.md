@@ -38,61 +38,135 @@ The **Kiness API** is an API made with GraphQL to bring developers all the data 
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### Data structures
 
-What things you need to install the software and how to install them
+The main data entities you'll find in Kiness API are:
 
-```
-Give examples
-```
+- Muscles
+- Nerves
+- Nerve Roots
+- Actions
+- Planes of Motion
 
-### Installing
+### Querying data
 
-A step by step series of examples that tell you how to get a development env running
+To get the info related to each entity you have to build the queries as follows:
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+```graphql
+# Replace 'Entity' by one of the mentioned previously.
+{
+  Entity(name: "Some text the entity could include")
+}
+# In case you want to get all the entries...:
+{
+  Entity
+}
 ```
 
-### And coding style tests
+That's the way to retrieve all the entries that match the entity specified.
 
-Explain what these tests test and why
+Lets say you want to get all the muscles' names and te list of nerves in the database:
 
+```graphql
+{
+  Nerves(name: "")
+  Muscles(name: "") {
+    name
+  }
+}
 ```
-Give an example
+
+These two ways, writing the parameter with an empty string or without passing any parameter, gives you all the entries.
+
+## Examples
+
+### Muscles
+
+- Get muscles whose names include the specific string provided, specifying the data you want to retrieve from them (name, origin, insertion, nerve, root):
+
+```graphql
+{
+  Muscles(name: "biceps") {
+    name
+    origin
+    insertion
+    nerve
+    root
+  }
+}
 ```
 
-## Deployment
+![Query and Result](docAssets/queryMuscle.png)
 
-Add additional notes about how to deploy this on a live system
+The muscle entity is the most powerful and the one that can bring more posibilities. The parameters you can add to filter the muscles are: name, origin, insertion, nerve, root, plane of motion and action. As an example, we can find the muscle that it's being innervated by some specific nerve and does some specific action:
+
+```graphql
+{
+  Muscles(name: "biceps", plane: "frontal", action: "flexion") {
+    name
+    planeMotion
+    action
+  }
+}
+```
+
+Giving the next:
+
+![Query and Result](docAssets/queryMultipleParameter.png)
+
+### Nerves
+
+- Get nerves whose names include the specific string provided:
+
+```graphql
+{
+  Nerves(name: "sciatic")
+}
+```
+
+![Query and Result](docAssets/queryNerve.png)
+
+### Nerve Roots
+
+- Get nerves' roots whose names include the specific string provided:
+
+```graphql
+{
+  NerveRoots(name: "T7")
+}
+```
+
+![Query and Result](docAssets/queryNerveRoot.png)
+
+### Actions
+
+- Get actions whose names include the specific string provided:
+
+```graphql
+{
+  Actions(name: "flexion")
+}
+```
+
+![Query and Result](docAssets/queryAction.png)
+
+### Plane of Motion
+
+- Get planes of motion whose names include the specific string provided:
+
+```graphql
+{
+  PlanesOfMotion(name: "sagittal")
+}
+```
+
+![Query and Result](docAssets/queryPlaneMotion.png)
 
 ## Built With
 
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-- [Maven](https://maven.apache.org/) - Dependency Management
-- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+- [GraphQL](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+- [TypeScript](https://maven.apache.org/) - Dependency Management
+- [Express](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 

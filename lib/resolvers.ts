@@ -70,6 +70,17 @@ export const resolvers = {
           })
         }
 
+        if (args.action) {
+          muscles = muscles.filter((muscle) => {
+            let actionsOfMuscle = muscle.action.find((action) => {
+              let muscleAction = action.toUpperCase()
+              let argsAction = args.action.toUpperCase()
+              return muscleAction.includes(argsAction)
+            })
+            return actionsOfMuscle
+          })
+        }
+
         if (args.root) {
           muscles = muscles.filter((muscle) => {
             let muscleNerveRoot = muscle.innervation.root.toString()
@@ -103,7 +114,7 @@ export const resolvers = {
         return actions
       }
     },
-    InnervationNerves: (root, args) => {
+    Nerves: (root, args) => {
       if (!args.name) {
         return Object.keys(InnervationNerves)
       } else if (args.name) {
