@@ -164,23 +164,23 @@ Giving the next:
 
 ## Built With
 
-- [GraphQL](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-- [TypeScript](https://maven.apache.org/) - Dependency Management
-- [Express](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+- [GraphQL](https://graphql.org/) - GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.
+- [TypeScript](http://www.typescriptlang.org/) - TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
+- [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](#) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/AntelaBrais/KinessAPI/tags).
 
 ## Authors
 
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
+- **Brais Antela** - _Initial work_ - [AntelaBrais](https://github.com/AntelaBrais)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/AntelaBrais/KinessAPI/graphs/contributors) who participated in this project.
 
 ## License
 
