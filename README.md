@@ -5,7 +5,7 @@ author:
 output: pdf_document
 ---
 
-[I'm an inline-style link](https://www.google.com)
+[🇪🇸 Traducción](https://github.com/AntelaBrais/KinessAPI/blob/master/README.es.md)
 
 # Introduction
 
