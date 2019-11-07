@@ -5,8 +5,6 @@ author:
 output: pdf_document
 ---
 
-[I'm an inline-style link](https://www.google.com)
-
 # Introduction
 
 El propósito de _"Kiness API"_ es permitir a los desarrolladores tener acceso a una base de datos relacionados con el campo de la Kinesiología. Permitir a los desarrolladores crear herramientas que puedan desembocar en mejores herramientas para Kinesiólogos.
