@@ -9,34 +9,17 @@ output: pdf_document
 
 # Introduction
 
-El propósito de _"Kiness API"_ es permitir a los desarrolladores tener acceso a una base de datos relacionados con el campo de la Kinesiología. Permitir a los desarrolladores crear herramientas que puedan desembocar en mejores herramientas para Kinesiólogos.
+The purpose of _Kines API_ is to let developers have access to almost all the data related with the human movement, muscles, strength exercises, all of this is also named under the umbrella name "Kinesiology".
 
-Kiness API se crea con GraphQL, un "data query language", que permite hacer consultas sobre, por ejemplo:
-
-- Músculos: Gracias a Kiness API se podrá consultar toda la información relativa a un músculo concreto.
-
-Imagina querer saber cuáles son los nervios que inervan el bíceps braquial, o saber en qué planos de movimiento, o su origen e insercción. Esto se podría hacer con las siguientes expresiones:
-
-```graphql
-{
-  Muscles(name: "Biceps Brachii Short Head") {
-    insertion
-    action
-  }
-}
-```
-
-Con esta query obtendríamos la insercción y acción de la cabeza corta del bíceps braquial.
-
-La clave es permitir a los desarrolladores tener herramientas (Kiness API) que les permitan crear nuevas herramientas (Ejemplo: Base de datos interactiva sobre músculos) para los Kinesiólogos.
+Our aim is to create tools for developers that let them to create new amazing apps and services in the Kinesiology and Sports sciences field.
 
 # Kiness API
 
-The **Kiness API** is an API made with GraphQL to bring developers all the data related with the human movement science, also known as Kinesiology 🤾‍♂️⛹️‍♀️. We are starting with muscles 💪 and nerves 🧠 data, with bones data 🦴 and other candies 🏋️‍♀️ being work in progress.
+The **Kiness API** is an API made with GraphQL that brings developers all the data related with the human movement science, also known as Kinesiology 🤾‍♂️⛹️‍♀️. We are starting with muscles 💪 and nerves 🧠 data, with bones data 🦴 and other candies 🏋️‍♀️ being work in progress.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will help you to better understand how the API works and the type of data you can expect to query and get.
 
 ### Data structures
 
@@ -65,7 +48,7 @@ To get the info related to each entity you have to build the queries as follows:
 
 That's the way to retrieve all the entries that match the entity specified.
 
-Lets say you want to get all the muscles' names and te list of nerves in the database:
+Lets say you want to get all the muscles' names and te list of nerves available in the database:
 
 ```graphql
 {
