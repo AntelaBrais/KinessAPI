@@ -5,7 +5,7 @@ author:
 output: pdf_document
 ---
 
-[🇪🇸 Traducción](https://github.com/AntelaBrais/KinessAPI/blob/master/README.es.md)
+[🇪🇸 Traducción - En progreso ⚙️](https://github.com/AntelaBrais/KinessAPI/blob/master/README.es.md)
 
 # Introduction
 
@@ -171,6 +171,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+None for the moment.
