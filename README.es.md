@@ -65,7 +65,7 @@ Estas dos formas, escribiendo el parámetro "name" vacío o sin pasar ningún pa
 
 ### Músculos
 
-- Get muscles whose names include the specific string provided, specifying the data you want to retrieve from them (name, origin, insertion, nerve, root):
+- Obtén los músculos cuyos nombres incluyan el texto especificado, concretando los datos que quieres obtener de ellos (nombre, origen, insercción, nervio, raíz nerviosa):
 
 ```graphql
 {
@@ -81,7 +81,7 @@ Estas dos formas, escribiendo el parámetro "name" vacío o sin pasar ningún pa
 
 ![Query and Result](docAssets/queryMuscle.png)
 
-The muscle entity is the most powerful and the one that can bring more posibilities. The parameters you can add to filter the muscles are: name, origin, insertion, nerve, root, plane of motion and action. As an example, we can find the muscle that it's being innervated by some specific nerve and does some specific action:
+La entidad "músculo" es la más interesante ya que es la que más posibilidades ofrece. Los parámetros que puedes añadir para filtrar la lista de músculos son: nombre, origen, insercción, nervio, raíz nerviosa, plano de movimiento y acción. Por ejemplo, podemos obtener el músculo que sea invervado por un nervio específico y que realice una acción concreta:
 
 ```graphql
 {
@@ -93,13 +93,13 @@ The muscle entity is the most powerful and the one that can bring more posibilit
 }
 ```
 
-Giving the next:
+Dando lo siguiente:
 
 ![Query and Result](docAssets/queryMultipleParameter.png)
 
-### Nerves
+### Nervios
 
-- Get nerves whose names include the specific string provided:
+- Obtén los nombres de los nervios que incluyan el texto incluído:
 
 ```graphql
 {
@@ -109,9 +109,9 @@ Giving the next:
 
 ![Query and Result](docAssets/queryNerve.png)
 
-### Nerve Roots
+### Raíces Nerviosas
 
-- Get nerves' roots whose names include the specific string provided:
+- Obtén los nombres de las raíces nerviosas que incluyan el texto incluído:
 
 ```graphql
 {
@@ -121,9 +121,9 @@ Giving the next:
 
 ![Query and Result](docAssets/queryNerveRoot.png)
 
-### Actions
+### Acciones
 
-- Get actions whose names include the specific string provided:
+- Obtén los nombres de las acciones que incluyan el texto incluído:
 
 ```graphql
 {
@@ -133,7 +133,7 @@ Giving the next:
 
 ![Query and Result](docAssets/queryAction.png)
 
-### Plane of Motion
+### Plano de Movimiento
 
 - Get planes of motion whose names include the specific string provided:
 
@@ -145,7 +145,7 @@ Giving the next:
 
 ![Query and Result](docAssets/queryPlaneMotion.png)
 
-## Built With
+## Creado con
 
 - [GraphQL](https://graphql.org/) - GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data.
 - [TypeScript](http://www.typescriptlang.org/) - TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
@@ -153,21 +153,21 @@ Giving the next:
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](#) for details on our code of conduct, and the process for submitting pull requests to us.
+Échale un vistazo a [CONTRIBUTING.md](#) para detalles sobre nuestro código de conducta, y el proceso para proponer pull requests.
 
-## Versioning
+## Versionado
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/AntelaBrais/KinessAPI/tags).
+Usamos [SemVer](http://semver.org/) para el versionado. Para las versiones disponibles, mira las [etiquetas en este repositorio](https://github.com/AntelaBrais/KinessAPI/tags).
 
-## Authors
+## Autores
 
-- **Brais Antela** - _Initial work_ - [AntelaBrais](https://github.com/AntelaBrais)
+- **Brais Antela** - _Trabajo inicial_ - [AntelaBrais](https://github.com/AntelaBrais)
 
-See also the list of [contributors](https://github.com/AntelaBrais/KinessAPI/graphs/contributors) who participated in this project.
+Mira la lista de [contribuidores](https://github.com/AntelaBrais/KinessAPI/graphs/contributors) que han participado en este proyecto.
 
-## License
+## Licencia
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Este proyecto está bajo licencia MIT - mira el archivo [LICENSE.md](LICENSE.md) para detalles.
 
 ## Acknowledgments
 

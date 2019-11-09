@@ -5,7 +5,7 @@ author:
 output: pdf_document
 ---
 
-[🇪🇸 Traducción - En progreso ⚙️](https://github.com/AntelaBrais/KinessAPI/blob/master/README.es.md)
+[🇪🇸 Traducción](https://github.com/AntelaBrais/KinessAPI/blob/master/README.es.md)
 
 # Introduction
 
