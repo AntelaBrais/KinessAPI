@@ -4,7 +4,7 @@ import graphqlHTTP from 'express-graphql'
 import { readFileSync } from 'fs'
 import { join } from 'path'
 import cors from 'cors'
-import { resolvers } from './src/resolvers'
+import { resolvers } from './api/resolvers'
 
 const app = express()
 
