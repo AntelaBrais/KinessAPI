@@ -4,7 +4,7 @@ import graphqlHTTP from 'express-graphql'
 import { readFileSync } from 'fs'
 import { join } from 'path'
 import cors from 'cors'
-import { resolvers } from './api/resolvers'
+import { resolvers } from './resolvers'
 
 const app = express()
 
@@ -17,7 +17,7 @@ const schema = makeExecutableSchema({ typeDefs, resolvers })
 app.use(cors())
 
 app.use(
-  '/api',
+  '/graphql',
   graphqlHTTP({
     schema: schema,
     rootValue: resolvers,

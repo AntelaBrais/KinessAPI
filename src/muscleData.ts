@@ -1,4 +1,4 @@
-const fs = require('fs')
+// const fs = require('fs')
 export enum InnervationNerves {
   Musculocutaneous = 'Musculocutaneous nerve',
   Radial = 'Radial nerve',
@@ -1106,6 +1106,6 @@ function createEffectorsObject(effectorsData) {
 
 export const mandan = createEffectorsObject(Effectors)
 
-const dataObject = JSON.stringify(effectorsObject, null, 2)
+// const dataObject = JSON.stringify(effectorsObject, null, 2)
 
-fs.writeFileSync('./lib/test.json', dataObject)
+// fs.writeFileSync('./lib/test.json', dataObject)
