@@ -380,8 +380,10 @@ const e222: Exercise = {
     Effectors['Deltoid Anterior Fibers'],
     Effectors['Deltoid Middle Fibers'],
     Effectors['Deltoid Posterior Fibers'],
-    efectores.redondoMenor,
-    efectores.infraespinoso,
+    Effectors['Teres Minor'],
+    Effectors['Teres Minor'],
+    Effectors['Infra-spinatus'],
+    Effectors['Infra-spinatus'],
     efectores.trapecio
   ],
   cadenaCineticaAbierta: true,
@@ -457,10 +459,10 @@ const e223: Exercise = {
   reference: '223',
   name: 'Cara posterior de los hombros en polea doble',
   effectors: [
-    efectores.redondoMenor,
+    Effectors['Teres Minor'],
     Effectors['Deltoid Middle Fibers'],
     Effectors['Deltoid Posterior Fibers'],
-    efectores.infraespinoso,
+    Effectors['Infra-spinatus'],
     efectores.romboides,
     efectores.trapecio
   ],
@@ -472,8 +474,8 @@ const e232: Exercise = {
   reference: '232',
   name: 'Rotacion externa del brazo en polea',
   effectors: [
-    efectores.infraespinoso,
-    efectores.redondoMenor,
+    Effectors['Infra-spinatus'],
+    Effectors['Teres Minor'],
     Effectors['Deltoid Posterior Fibers'],
     efectores.romboides,
     efectores.trapecioGrupo.media
@@ -486,9 +488,10 @@ const e226: Exercise = {
   reference: '226',
   name: 'Elevaciones laterales con polea baja, tronco inclinado hacia delante',
   effectors: [
-    efectores.redondoMayor,
-    efectores.redondoMenor,
-    efectores.infraespinoso,
+    Effectors['Teres Major'],
+    ,
+    Effectors['Teres Minor'],
+    Effectors['Infra-spinatus'],
     Effectors['Deltoid Anterior Fibers'],
     Effectors['Deltoid Middle Fibers'],
     Effectors['Deltoid Posterior Fibers'],
@@ -531,7 +534,7 @@ const e219: Exercise = {
     Effectors['Deltoid Anterior Fibers'],
     Effectors['Pectoralis Major lower fibers'],
     Effectors['Pectoralis Major upper fibers'],
-    efectores.infraespinoso,
+    Effectors['Infra-spinatus'],
     efectores.serratoAnterior
   ],
   cadenaCineticaAbierta: true,
@@ -573,8 +576,8 @@ const e231: Exercise = {
     Effectors['Deltoid Anterior Fibers'],
     Effectors['Deltoid Middle Fibers'],
     Effectors['Deltoid Posterior Fibers'],
-    efectores.infraespinoso,
-    efectores.redondoMenor,
+    Effectors['Infra-spinatus'],
+    Effectors['Teres Minor'],
     efectores.romboides
   ],
   cadenaCineticaAbierta: true,
@@ -589,7 +592,9 @@ const e311: Exercise = {
     Effectors['Pectoralis Major upper fibers'],
     Effectors['Deltoid Anterior Fibers'],
     efectores.serratoAnterior,
-    efectores.triceps
+    Effectors['Triceps Brachii Lateral Head'],
+    Effectors['Triceps Brachii Long Head'],
+    Effectors['Triceps Brachii Medial Head']
   ],
   cadenaCineticaAbierta: true,
   tipoMaterial: tipoMaterial.movimientoLibre.barra,
@@ -601,7 +606,9 @@ const e312: Exercise = {
   effectors: [
     Effectors['Pectoralis Major lower fibers'],
     Effectors['Pectoralis Major upper fibers'],
-    efectores.triceps,
+    Effectors['Triceps Brachii Lateral Head'],
+    Effectors['Triceps Brachii Long Head'],
+    Effectors['Triceps Brachii Medial Head'],
     Effectors['Deltoid Anterior Fibers'],
     efectores.serratoAnterior
   ],
@@ -690,7 +697,9 @@ const e318: Exercise = {
   reference: '318',
   name: 'Press con mancuernas en banco plano',
   effectors: [
-    efectores.triceps,
+    Effectors['Triceps Brachii Lateral Head'],
+    Effectors['Triceps Brachii Long Head'],
+    Effectors['Triceps Brachii Medial Head'],
     Effectors['Deltoid Anterior Fibers'],
     Effectors['Pectoralis Major lower fibers'],
     Effectors['Pectoralis Major upper fibers'],
@@ -718,7 +727,9 @@ const e319: Exercise = {
     Effectors['Deltoid Anterior Fibers'],
     Effectors['Pectoralis Major lower fibers'],
     Effectors['Pectoralis Major upper fibers'],
-    efectores.triceps,
+    Effectors['Triceps Brachii Lateral Head'],
+    Effectors['Triceps Brachii Long Head'],
+    Effectors['Triceps Brachii Medial Head'],
     efectores.serratoAnterior
   ],
   cadenaCineticaAbierta: true,
@@ -778,9 +789,8 @@ const e331: Exercise = {
     Effectors['Pectoralis Major lower fibers'],
     Effectors['Pectoralis Major upper fibers'],
     Effectors['Triceps Brachii Long Head'],
-    efectores.redondoMayor,
-    efectores.dorsalAncho,
-    efectores.dorsalAncho,
+    Effectors['Teres Major'],
+    Effectors['Latissimus Dorse'],
     efectores.romboides
   ],
   cadenaCineticaAbierta: true,
@@ -795,8 +805,8 @@ const e332: Exercise = {
     Effectors['Pectoralis Major upper fibers'],
     Effectors['Triceps Brachii Long Head'],
     efectores.serratoAnterior,
-    efectores.redondoMayor,
-    efectores.dorsalAncho
+    Effectors['Teres Major'],
+    Effectors['Latissimus Dorse']
   ],
   cadenaCineticaAbierta: true,
   tipoMaterial: tipoMaterial.movimientoLibre.barra,
@@ -813,8 +823,9 @@ const e411: Exercise = {
     Effectors['Biceps Brachii Long Head'],
     Effectors['Biceps Brachii Short Head'],
     Effectors['Brachialis'],
-    efectores.redondoMayor,
-    efectores.dorsalAncho,
+    Effectors['Teres Major'],
+    ,
+    Effectors['Latissimus Dorse'],
     efectores.romboides,
     efectores.trapecioGrupo.inferior
   ],
@@ -830,8 +841,8 @@ const e412: Exercise = {
     Effectors['Biceps Brachii Long Head'],
     Effectors['Biceps Brachii Short Head'],
     Effectors['Brachialis'],
-    efectores.dorsalAncho,
-    efectores.redondoMayor
+    Effectors['Latissimus Dorse'],
+    Effectors['Teres Major']
   ],
   cadenaCineticaAbierta: false,
   tipoMaterial: tipoMaterial.calistenia,
@@ -845,8 +856,8 @@ const e413: Exercise = {
     Effectors['Biceps Brachii Long Head'],
     Effectors['Biceps Brachii Short Head'],
     Effectors['Brachialis'],
-    efectores.dorsalAncho,
-    efectores.redondoMayor
+    Effectors['Latissimus Dorse'],
+    Effectors['Teres Major']
   ],
   cadenaCineticaAbierta: true,
   tipoMaterial: tipoMaterial.polea,
@@ -860,8 +871,9 @@ const e414: Exercise = {
     Effectors['Biceps Brachii Short Head'],
     Effectors['Brachialis'],
     Effectors['Brachio-Radialis'],
-    efectores.dorsalAncho,
-    efectores.redondoMayor,
+    Effectors['Latissimus Dorse'],
+    Effectors['Teres Major'],
+    ,
     efectores.trapecioGrupo.inferior
   ],
   cadenaCineticaAbierta: true,
@@ -876,8 +888,8 @@ const e415: Exercise = {
     Effectors['Biceps Brachii Short Head'],
     Effectors['Brachialis'],
     Effectors['Brachio-Radialis'],
-    efectores.redondoMayor,
-    efectores.dorsalAncho
+    Effectors['Teres Major'],
+    Effectors['Latissimus Dorse']
   ],
   cadenaCineticaAbierta: true,
   tipoMaterial: tipoMaterial.polea,
@@ -892,7 +904,7 @@ const e421: Exercise = {
     Effectors['Biceps Brachii Short Head'],
     Effectors['Brachialis'],
     Effectors['Deltoid Posterior Fibers'],
-    efectores.dorsalAncho,
+    Effectors['Latissimus Dorse'],
     efectores.romboides
   ],
   cadenaCineticaAbierta: true,
@@ -908,11 +920,11 @@ const e422: Exercise = {
     Effectors['Brachialis'],
     Effectors['Brachio-Radialis'],
     Effectors['Deltoid Posterior Fibers'],
-    efectores.redondoMenor,
-    efectores.dorsalAncho,
+    Effectors['Teres Minor'],
+    Effectors['Latissimus Dorse'],
     efectores.romboides,
-    efectores.infraespinoso,
-    efectores.redondoMayor,
+    Effectors['Infra-spinatus'],
+    Effectors['Teres Major'],
     efectores.trapecio
   ],
   cadenaCineticaAbierta: true,
@@ -923,9 +935,9 @@ const e423: Exercise = {
   reference: '423',
   name: 'Pull-over con polea alta brazos extendidos',
   effectors: [
-    efectores.tricepsGrupo.larga,
-    efectores.dorsalAncho,
-    efectores.redondoMayor
+    Effectors['Triceps Brachii Long Head'],
+    Effectors['Latissimus Dorse'],
+    Effectors['Teres Major']
   ],
   cadenaCineticaAbierta: true,
   tipoMaterial: tipoMaterial.polea,
@@ -935,8 +947,9 @@ const e424: Exercise = {
   reference: '424',
   name: 'Remo horizontal a una mano con mancuernas',
   effectors: [
-    efectores.redondoMayor,
-    efectores.dorsalAncho,
+    Effectors['Teres Major'],
+    ,
+    Effectors['Latissimus Dorse'],
     efectores.romboides,
     efectores.trapecio,
     Effectors['Deltoid Posterior Fibers'],
@@ -954,11 +967,11 @@ const e425: Exercise = {
   name: 'Traccion horizontal con mancuernas',
   effectors: [
     Effectors['Deltoid Posterior Fibers'],
-    efectores.dorsalAncho,
-    efectores.infraespinoso,
+    Effectors['Latissimus Dorse'],
+    Effectors['Infra-spinatus'],
     efectores.romboides,
-    efectores.redondoMayor,
-    efectores.redondoMenor,
+    Effectors['Teres Major'],
+    Effectors['Teres Minor'],
     efectores.trapecio
   ],
   cadenaCineticaAbierta: true,
@@ -969,16 +982,16 @@ const e426: Exercise = {
   reference: '426',
   name: 'Remo horizontal con barra',
   effectors: [
-    efectores.dorsalAncho,
+    Effectors['Latissimus Dorse'],
     efectores.trapecio,
     Effectors['Biceps Brachii Long Head'],
     Effectors['Biceps Brachii Short Head'],
     Effectors['Brachialis'],
     Effectors['Brachio-Radialis'],
     efectores.romboides,
-    efectores.redondoMayor,
-    efectores.redondoMenor,
-    efectores.infraespinoso,
+    Effectors['Teres Major'],
+    Effectors['Teres Minor'],
+    Effectors['Infra-spinatus'],
     Effectors['Deltoid Posterior Fibers']
   ],
   cadenaCineticaAbierta: true,
@@ -989,16 +1002,16 @@ const e427: Exercise = {
   reference: '427',
   name: 'Remo en barra T sin apoyo ventral',
   effectors: [
-    efectores.dorsalAncho,
+    Effectors['Latissimus Dorse'],
     efectores.romboides,
-    efectores.infraespinoso,
+    Effectors['Infra-spinatus'],
     efectores.trapecio,
     Effectors['Biceps Brachii Long Head'],
     Effectors['Biceps Brachii Short Head'],
     Effectors['Brachialis'],
     Effectors['Brachio-Radialis'],
-    efectores.redondoMayor,
-    efectores.redondoMenor,
+    Effectors['Teres Major'],
+    Effectors['Teres Minor'],
     Effectors['Deltoid Posterior Fibers']
   ],
   cadenaCineticaAbierta: true,
@@ -1011,11 +1024,11 @@ const e428: Exercise = {
   effectors: [
     efectores.trapecio,
     efectores.romboides,
-    efectores.infraespinoso,
+    Effectors['Infra-spinatus'],
     Effectors['Biceps Brachii Long Head'],
     Effectors['Biceps Brachii Short Head'],
     Effectors['Brachialis'],
-    efectores.dorsalAncho,
+    Effectors['Latissimus Dorse'],
     Effectors['Deltoid Posterior Fibers']
   ],
   cadenaCineticaAbierta: true,
@@ -1026,8 +1039,8 @@ const e416: Exercise = {
   reference: '416',
   name: 'Peso muerto, piernas extendidas',
   effectors: [
-    efectores.gluteosGrupo.mayor,
-    efectores.bicepsFemoral,
+    Effectors['Gluteus Maximus'],
+    Effectors['Biceps Femoris'],
     efectores.isquiotibiales,
     efectores.erectoresEspalda
   ],
@@ -1042,8 +1055,10 @@ const e417: Exercise = {
     efectores.trapecio,
     efectores.cuadriceps,
     efectores.aductores,
-    efectores.dorsalAncho,
-    efectores.gluteos,
+    Effectors['Latissimus Dorse'],
+    Effectors['Gluteus Maximus'],
+    Effectors['Gluteus Medius'],
+    Effectors['Gluteus Minimus'],
     efectores.erectoresEspalda
   ],
   cadenaCineticaAbierta: true,
@@ -1056,10 +1071,10 @@ const e418: Exercise = {
   effectors: [
     efectores.trapecio,
     efectores.cuadriceps,
-    efectores.bicepsFemoral,
+    Effectors['Biceps Femoris'],
     efectores.rectoAbdomen,
     efectores.oblicuoExternoAbdomen,
-    efectores.dorsalAncho,
+    Effectors['Latissimus Dorse'],
     efectores.erectoresEspalda
   ],
   cadenaCineticaAbierta: true,
@@ -1070,12 +1085,14 @@ const e419: Exercise = {
   reference: '419',
   name: 'Peso muerto con barra trap',
   effectors: [
-    efectores.dorsalAncho,
+    Effectors['Latissimus Dorse'],
     efectores.trapecio,
-    efectores.infraespinoso,
-    efectores.redondoMayor,
-    efectores.redondoMenor,
-    efectores.gluteos,
+    Effectors['Infra-spinatus'],
+    Effectors['Teres Major'],
+    Effectors['Teres Minor'],
+    Effectors['Gluteus Maximus'],
+    Effectors['Gluteus Medius'],
+    Effectors['Gluteus Minimus'],
     efectores.cuadriceps,
     efectores.erectoresEspalda
   ],
@@ -1089,8 +1106,8 @@ const e4110: Exercise = {
   effectors: [
     efectores.isquiotibiales,
     efectores.erectoresEspalda,
-    efectores.gluteosGrupo.mayor,
-    efectores.bicepsFemoral
+    Effectors['Gluteus Maximus'],
+    Effectors['Biceps Femoris']
   ],
   cadenaCineticaAbierta: false,
   tipoMaterial: tipoMaterial.calistenia,
@@ -1116,7 +1133,10 @@ const e4112: Exercise = {
     Effectors['Deltoid Anterior Fibers'],
     Effectors['Deltoid Middle Fibers'],
     Effectors['Deltoid Posterior Fibers'],
-    efectores.gluteos,
+
+    Effectors['Gluteus Maximus'],
+    Effectors['Gluteus Medius'],
+    Effectors['Gluteus Minimus'],
     efectores.rectoAbdomen,
     efectores.elevadorEscapula
   ],
@@ -1168,7 +1188,12 @@ const e4116: Exercise = {
 const e511: Exercise = {
   reference: '511',
   name: 'Flexion de rodillas con mancuernas',
-  effectors: [efectores.gluteos, efectores.cuadriceps],
+  effectors: [
+    Effectors['Gluteus Maximus'],
+    Effectors['Gluteus Medius'],
+    Effectors['Gluteus Minimus'],
+    efectores.cuadriceps
+  ],
   cadenaCineticaAbierta: false,
   tipoMaterial: tipoMaterial.movimientoLibre.mancuerna,
   material: Array
@@ -1176,7 +1201,12 @@ const e511: Exercise = {
 const e512: Exercise = {
   reference: '512',
   name: 'Flexion de rodillas con mancuerna sujeta entre las piernas',
-  effectors: [efectores.gluteos, efectores.cuadriceps],
+  effectors: [
+    Effectors['Gluteus Maximus'],
+    Effectors['Gluteus Medius'],
+    Effectors['Gluteus Minimus'],
+    efectores.cuadriceps
+  ],
   cadenaCineticaAbierta: false,
   tipoMaterial: tipoMaterial.movimientoLibre.mancuerna,
   material: Array
@@ -1186,7 +1216,9 @@ const e513: Exercise = {
   name: 'Squat frontal con barra',
   effectors: [
     efectores.cuadriceps,
-    efectores.gluteos,
+    Effectors['Gluteus Maximus'],
+    Effectors['Gluteus Medius'],
+    Effectors['Gluteus Minimus'],
     efectores.rectoAbdomen,
     efectores.erectoresEspalda
   ],
@@ -1198,7 +1230,9 @@ const e514: Exercise = {
   reference: '514',
   name: 'Squat',
   effectors: [
-    efectores.gluteos,
+    Effectors['Gluteus Maximus'],
+    Effectors['Gluteus Medius'],
+    Effectors['Gluteus Minimus'],
     efectores.cuadriceps,
     efectores.isquiotibiales,
     efectores.erectoresEspalda,
@@ -1214,7 +1248,9 @@ const e515: Exercise = {
   effectors: [
     efectores.isquiotibiales,
     efectores.cuadriceps,
-    efectores.gluteos,
+    Effectors['Gluteus Maximus'],
+    Effectors['Gluteus Medius'],
+    Effectors['Gluteus Minimus'],
     efectores.rectoAbdomen,
     efectores.erectoresEspalda
   ],
@@ -1227,7 +1263,9 @@ const e516: Exercise = {
   name: 'Press de piernas inclinado',
   effectors: [
     efectores.cuadriceps,
-    efectores.gluteos,
+    Effectors['Gluteus Maximus'],
+    Effectors['Gluteus Medius'],
+    Effectors['Gluteus Minimus'],
     efectores.isquiotibiales
   ],
   cadenaCineticaAbierta: true,
@@ -1237,7 +1275,12 @@ const e516: Exercise = {
 const e517: Exercise = {
   reference: '517',
   name: 'Hack Squat',
-  effectors: [efectores.cuadriceps, efectores.gluteos],
+  effectors: [
+    efectores.cuadriceps,
+    Effectors['Gluteus Maximus'],
+    Effectors['Gluteus Medius'],
+    Effectors['Gluteus Minimus']
+  ],
   cadenaCineticaAbierta: false,
   tipoMaterial: tipoMaterial.maquinaAsistencia,
   material: Array
@@ -1264,7 +1307,7 @@ const e521: Exercise = {
   effectors: [
     efectores.isquiotibiales,
     efectores.gemelos,
-    efectores.bicepsFemoral
+    Effectors['Biceps Femoris']
   ],
   cadenaCineticaAbierta: true,
   tipoMaterial: tipoMaterial.maquinaAsistencia,
@@ -1274,7 +1317,8 @@ const e522: Exercise = {
   reference: '522',
   name: 'Isquiotibiales alterno en maquina guiada de pie',
   effectors: [
-    efectores.bicepsFemoral,
+    Effectors['Biceps Femoris'],
+    ,
     efectores.isquiotibiales,
     efectores.gemelos
   ],
@@ -1287,7 +1331,8 @@ const e523: Exercise = {
   name: 'Isquiotibiales sentado en maquina',
   effectors: [
     efectores.isquiotibiales,
-    efectores.bicepsFemoral,
+    Effectors['Biceps Femoris'],
+    ,
     efectores.gemelos
   ],
   cadenaCineticaAbierta: true,
@@ -1300,7 +1345,7 @@ const e524: Exercise = {
   effectors: [
     efectores.erectoresEspalda,
     efectores.isquiotibiales,
-    efectores.bicepsFemoral
+    Effectors['Biceps Femoris']
   ],
   cadenaCineticaAbierta: true,
   tipoMaterial: tipoMaterial.movimientoLibre.barra,
