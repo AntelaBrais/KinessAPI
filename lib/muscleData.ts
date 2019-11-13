@@ -1108,4 +1108,4 @@ export const mandan = createEffectorsObject(Effectors)
 
 // const dataObject = JSON.stringify(effectorsObject, null, 2)
 
-// fs.writeFileSync('./lib/test.json', dataObject)
+// fs.writeFileSync('./lib/data.json', dataObject)
