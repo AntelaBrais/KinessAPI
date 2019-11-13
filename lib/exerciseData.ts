@@ -12,15 +12,29 @@ interface Muscle {
   }
 }
 
+// Esta variable es de razón, ya que cuando es 0 indica ausencia de la característica.
+enum AssistanceDegree {
+  Free = 0,
+  Intermediate = 0.5,
+  Complete = 1
+}
+
+interface Material {
+  reference: string
+  name: string
+  assistance: AssistanceDegree
+}
+
 interface Exercise {
   reference: string
   name: string
   effectors: Array<Muscle>
+  material: Material
 }
 
 const e3_1: Exercise = {
   reference: '3_1',
-  name: 'Press Banca',
+  name: 'Press Banca con mancuernas',
   effectors: [
     Effectors['Pectoralis Major lower fibers'],
     Effectors['Pectoralis Major upper fibers'],
@@ -28,7 +42,30 @@ const e3_1: Exercise = {
     Effectors['Triceps Brachii Medial Head'],
     Effectors['Triceps Brachii Long Head'],
     Effectors['Deltoid Anterior Fibers']
-  ]
+  ],
+  material: {
+    reference: 'm1_1',
+    name: 'Mancuernas',
+    assistance: AssistanceDegree.Free
+  }
+}
+
+const e3_2: Exercise = {
+  reference: '3_2',
+  name: 'Press Banca con barra',
+  effectors: [
+    Effectors['Pectoralis Major lower fibers'],
+    Effectors['Pectoralis Major upper fibers'],
+    Effectors['Triceps Brachii Lateral Head'],
+    Effectors['Triceps Brachii Medial Head'],
+    Effectors['Triceps Brachii Long Head'],
+    Effectors['Deltoid Anterior Fibers']
+  ],
+  material: {
+    reference: 'm1_2',
+    name: 'Barra',
+    assistance: AssistanceDegree.Free
+  }
 }
 
 // Brazos
