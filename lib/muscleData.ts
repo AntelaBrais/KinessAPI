@@ -1,4 +1,4 @@
-// const fs = require('fs')
+// const fs = require("fs")
 export enum InnervationNerves {
   Musculocutaneous = "Musculocutaneous nerve",
   Radial = "Radial nerve",
@@ -182,11 +182,6 @@ const bicepsBrachiShortHead: Muscle = {
   }
 }
 
-const bicepsBrachiGroup: Array<Muscle> = [
-  bicepsBrachiLongHead,
-  bicepsBrachiShortHead
-]
-
 const brachialis: Muscle = {
   name: "Brachialis",
   origin: "Distal half of the anterior shaft of the humerus",
@@ -363,11 +358,6 @@ const pectoralisMajorLower: Muscle = {
   }
 }
 
-const pectoralisMajorGroup: Array<Muscle> = [
-  pectoralisMajorUpper,
-  pectoralisMajorLower
-]
-
 const subscapularis: Muscle = {
   name: "Sub-scapularis",
   origin: "Entire anterior surface of subscapular fossa",
@@ -461,12 +451,6 @@ const deltoidPosterior: Muscle = {
     root: [NerveRoots.c5, NerveRoots.c6]
   }
 }
-
-const deltoidGroup: Array<Muscle> = [
-  deltoidAnterior,
-  deltoidMiddle,
-  deltoidPosterior
-]
 
 const supraSpinatus: Muscle = {
   name: "Supra-spinatus",
@@ -1345,6 +1329,28 @@ const extensorHallucisBrevis: Muscle = {
 }
 
 export const Effectors: Array<Muscle> = [
+  soleus,
+  abductorDigitiMinimi,
+  abductorHallucis,
+  adductorHallucis,
+  dorsalInterossei,
+  extensorDigitorumBrevis,
+  extensorDigitorumLongus,
+  extensorHallucisBrevis,
+  extensorHallucisLongus,
+  flexorDigitiMinimiBrevis,
+  flexorDigitorumBrevis,
+  flexorHallucisBrevis,
+  flexorDigitorumLongus,
+  footLumbricals,
+  flexorHallucisLongus,
+  peroneusBrevis,
+  peroneusLongus,
+  peroneusTertius,
+  plantarInterossei,
+  quadratusPlantae,
+  tibialisAnterior,
+  tibialisPosterior,
   adductorBrevis,
   adductorLongus,
   adductorMagnus,
@@ -1420,4 +1426,4 @@ export const mandan = createEffectorsObject(Effectors)
 
 // const dataObject = JSON.stringify(effectorsObject, null, 2)
 
-// fs.writeFileSync('./lib/data.json', dataObject)
+// fs.writeFileSync("./lib/data.json", dataObject)

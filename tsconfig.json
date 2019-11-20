@@ -2,6 +2,7 @@
   "compilerOptions": {
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "noUnusedLocals": true,
     "outDir": "./public"
   }
 }

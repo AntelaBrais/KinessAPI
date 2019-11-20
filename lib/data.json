@@ -174,15 +174,14 @@
   },
   "Gastrocnemius": {
     "name": "Gastrocnemius",
-    "origin": "Posterior surface of lateral condyle of femur",
-    "insertion": "Upper posterior medial surface of tibia",
+    "origin": "Medial head: posterior surface of the medial femoral condyle Lateral head: posterior surface of the lateral femoral condyle",
+    "insertion": "Posterior surface of the calcaneus (Achilles tendon)",
     "action": [
       "Flexion of the knee",
-      "Internal rotation of the knee"
+      "Plantar flexion of the ankle"
     ],
     "planeMotion": [
-      "Sagittal",
-      "Transverse"
+      "Sagittal"
     ],
     "innervation": {
       "nerve": [
