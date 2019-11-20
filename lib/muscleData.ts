@@ -1,59 +1,61 @@
 // const fs = require('fs')
 export enum InnervationNerves {
-  Musculocutaneous = 'Musculocutaneous nerve',
-  Radial = 'Radial nerve',
-  Median = 'Median nerve',
-  LateralPectoral = 'Lateral Pectoral nerve',
-  MedialPectoral = 'Medial Pectoral nerve',
-  UpperSubscapular = 'Upper subscapular nerve',
-  LowerSubscapular = 'Lower subscapular nerve',
-  Axillary = 'Axillary nerve',
-  Suprascapula = 'Suprascapula nerve',
-  Thoracodorsal = 'Thoracodorsal nerve',
-  Lumbar = 'Lumbar nerve',
-  Femoral = 'Femoral nerve',
-  Obturador = 'Obturador nerve',
-  Sciatic = 'Sciatic nerve',
-  InferiorGluteal = 'Inferior Gluteal nerve',
-  SuperiorGluteal = 'Superior Gluteal nerve',
-  FirstSacral = 'First Sacral Nerve',
-  SecondSacral = 'Second Sacral Nerve',
-  Sacral = 'Sacral nerve',
-  Pudental = 'Pudental nerve',
-  SacralPlexus = 'Sacral Plexus nerve',
-  PosteriorCutaneousFemoral = 'Posterior Cutaneous Femoral nerve',
-  Tibial = 'Tibial nerve'
+  Musculocutaneous = "Musculocutaneous nerve",
+  Radial = "Radial nerve",
+  Median = "Median nerve",
+  SuperficialPeroneal = "Superficial peroneal nerve",
+  DeepPeroneal = "Deep peroneal nerve",
+  LateralPectoral = "Lateral Pectoral nerve",
+  MedialPectoral = "Medial Pectoral nerve",
+  UpperSubscapular = "Upper subscapular nerve",
+  LowerSubscapular = "Lower subscapular nerve",
+  Axillary = "Axillary nerve",
+  Suprascapula = "Suprascapula nerve",
+  Thoracodorsal = "Thoracodorsal nerve",
+  Lumbar = "Lumbar nerve",
+  Femoral = "Femoral nerve",
+  Obturador = "Obturador nerve",
+  Sciatic = "Sciatic nerve",
+  InferiorGluteal = "Inferior Gluteal nerve",
+  SuperiorGluteal = "Superior Gluteal nerve",
+  FirstSacral = "First Sacral Nerve",
+  SecondSacral = "Second Sacral Nerve",
+  Sacral = "Sacral nerve",
+  Pudental = "Pudental nerve",
+  SacralPlexus = "Sacral Plexus nerve",
+  PosteriorCutaneousFemoral = "Posterior Cutaneous Femoral nerve",
+  Tibial = "Tibial nerve"
 }
 
 export enum NerveRoots {
-  c1 = 'C1',
-  c2 = 'C2',
-  c3 = 'C3',
-  c4 = 'C4',
-  c5 = 'C5',
-  c6 = 'C6',
-  c7 = 'C7',
-  c8 = 'C8',
-  t1 = 'T1',
-  t2 = 'T2',
-  t3 = 'T3',
-  t4 = 'T4',
-  t5 = 'T5',
-  t6 = 'T6',
-  t7 = 'T7',
-  t8 = 'T8',
-  t9 = 'T9',
-  t10 = 'T10',
-  t11 = 'T11',
-  t12 = 'T12',
-  l1 = 'L1',
-  l2 = 'L2',
-  l3 = 'L3',
-  l4 = 'L4',
-  l5 = 'L5',
-  s1 = 'S1',
-  s2 = 'S2',
-  s3 = 'S3'
+  c1 = "C1",
+  c2 = "C2",
+  c3 = "C3",
+  c4 = "C4",
+  c5 = "C5",
+  c6 = "C6",
+  c7 = "C7",
+  c8 = "C8",
+  t1 = "T1",
+  t2 = "T2",
+  t3 = "T3",
+  t4 = "T4",
+  t5 = "T5",
+  t6 = "T6",
+  t7 = "T7",
+  t8 = "T8",
+  t9 = "T9",
+  t10 = "T10",
+  t11 = "T11",
+  t12 = "T12",
+  l1 = "L1",
+  l2 = "L2",
+  l3 = "L3",
+  l4 = "L4",
+  l5 = "L5",
+  s1 = "S1",
+  s2 = "S2",
+  s3 = "S3"
 }
 
 interface Innervation {
@@ -62,56 +64,66 @@ interface Innervation {
 }
 
 export enum Action {
-  ForearmSupination = 'Supination of the forearm',
-  ForearmPronation = 'Pronation of the forearm',
+  ForearmSupination = "Supination of the forearm",
+  ForearmPronation = "Pronation of the forearm",
 
-  ElbowFlexion = 'Flexion of the elbow',
-  ElbowExtension = 'Extension of the elbow',
+  ElbowFlexion = "Flexion of the elbow",
+  ElbowExtension = "Extension of the elbow",
 
-  WeakShoulderFlexion = 'Weak flexion of the shoulder',
-  WeakShoulderAbduction = 'Weak Abduction of the Shoulder',
+  WeakShoulderFlexion = "Weak flexion of the shoulder",
+  WeakShoulderAbduction = "Weak Abduction of the Shoulder",
 
-  ShoulderExtension = 'Extension of the shoulder',
-  ShoulderFlexion = 'Flexion of the shoulder',
-  ShoulderAdduction = 'Adduction of the shoulder',
-  ShoulderAbduction = 'Abudction of the shoulder',
+  ShoulderExtension = "Extension of the shoulder",
+  ShoulderFlexion = "Flexion of the shoulder",
+  ShoulderAdduction = "Adduction of the shoulder",
+  ShoulderAbduction = "Abudction of the shoulder",
 
-  ShoulderHorizontalAbduction = 'Horizontal abduction of the shoulder',
-  ShoulderHorizontalAdduction = 'Horizontal adduction of the shoulder',
-  ShoulderInternalRotation = 'Internal rotation of the shoulder',
-  ShoulderExternalRotation = 'External rotation of the shoulder',
-  ShoulderDiagonalAdduction = 'Diagonal Adduction of the shoulder',
-  ShoulderDiagonalAbduction = 'Diagonal Abduction of the shoulder',
+  ShoulderHorizontalAbduction = "Horizontal abduction of the shoulder",
+  ShoulderHorizontalAdduction = "Horizontal adduction of the shoulder",
+  ShoulderInternalRotation = "Internal rotation of the shoulder",
+  ShoulderExternalRotation = "External rotation of the shoulder",
+  ShoulderDiagonalAdduction = "Diagonal Adduction of the shoulder",
+  ShoulderDiagonalAbduction = "Diagonal Abduction of the shoulder",
 
-  HipFlexion = 'Flexion of the hip',
-  HipExtension = 'Extension of the hip',
-  HipAdduction = 'Adduction of the hip',
-  HipAbduction = 'Abduction of the hip',
-  AnteriorPelvicRotation = 'Anterior Pelvic Rotation',
-  HipExternalRotation = 'External Rotation of the hip',
-  HipInternalRotation = 'Internal Rotation of the hip',
-  HipInternalRotationKneeFlexed = 'Internal rotation of the hip when knee is flexed',
-  PelvicTransverseRotationContralaterallyFtabilizedFemur = 'Transverse pelvic rotation contralaterally when ipsilateral femur is stabilized',
+  HipFlexion = "Flexion of the hip",
+  HipExtension = "Extension of the hip",
+  HipAdduction = "Adduction of the hip",
+  HipAbduction = "Abduction of the hip",
+  AnteriorPelvicRotation = "Anterior Pelvic Rotation",
+  HipExternalRotation = "External Rotation of the hip",
+  HipInternalRotation = "Internal Rotation of the hip",
+  HipInternalRotationKneeFlexed = "Internal rotation of the hip when knee is flexed",
+  PelvicTransverseRotationContralaterallyFtabilizedFemur = "Transverse pelvic rotation contralaterally when ipsilateral femur is stabilized",
 
-  LumbarSpineFlexion = 'Flexion of the lumbar spine',
-  LumbarSpineLateralFlexion = 'Lateral flexion of the lumbar spine',
-  PelvicLateralRotation = 'Lateral rotation of the pelvic',
+  LumbarSpineFlexion = "Flexion of the lumbar spine",
+  LumbarSpineLateralFlexion = "Lateral flexion of the lumbar spine",
+  PelvicLateralRotation = "Lateral rotation of the pelvic",
 
-  PelvicPosteriorRotation = 'Posterior Rotation of the Pelvic',
+  PelvicPosteriorRotation = "Posterior Rotation of the Pelvic",
 
-  KneeExtension = 'Extension of the knee',
-  KneeFlexion = 'Flexion of the knee',
-  KneeInternalRotation = 'Internal rotation of the knee',
-  KneeExternalRotation = 'External rotation of the knee',
+  KneeExtension = "Extension of the knee",
+  KneeFlexion = "Flexion of the knee",
+  KneeInternalRotation = "Internal rotation of the knee",
+  KneeExternalRotation = "External rotation of the knee",
 
-  ThighExternalRotation = 'External Rotation of the thigh'
+  ThighExternalRotation = "External Rotation of the thigh",
+
+  anklePlantarFlexion = "Plantar flexion of the ankle",
+  ankleDorsiFlexion = "Dorsiflexion of the ankle",
+  footInversion = "Inversion of the foot",
+  footEversion = "Eversion of the foot",
+
+  fourLesserFlexion = "Flexion of the four lesser toes at the metatarso- phalangeal and the proximal and distal interphalangeal joints",
+  greatToeFlexion = "Flexion of the great toe at the metatarso- phalangeal and interphalangeal joints",
+  fourLesserExtension = "Extension of the four lesser toes at the metatarso- phalangeal and the proximal and distal interphalangeal joints",
+  greatToeExtension = "Extension of the great toe at the metatarso- phalangeal and interphalangeal joints"
 }
 
 export enum PlaneMotion {
-  Transverse = 'Transverse',
-  Sagittal = 'Sagittal',
-  Frontal = 'Frontal',
-  Diagonal = 'Diagonal'
+  Transverse = "Transverse",
+  Sagittal = "Sagittal",
+  Frontal = "Frontal",
+  Diagonal = "Diagonal"
 }
 
 interface Muscle {
@@ -124,10 +136,10 @@ interface Muscle {
 }
 
 const bicepsBrachiLongHead: Muscle = {
-  name: 'Biceps Brachii Long Head',
-  origin: 'Supraglenoid tubercle above the superior lip of the glenoid fossa',
+  name: "Biceps Brachii Long Head",
+  origin: "Supraglenoid tubercle above the superior lip of the glenoid fossa",
   insertion:
-    'Tuberosity of the radius and bicipital aponeurosis (lacertus fibrosis)',
+    "Tuberosity of the radius and bicipital aponeurosis (lacertus fibrosis)",
   action: [
     Action.ForearmSupination,
     Action.ElbowFlexion,
@@ -146,11 +158,11 @@ const bicepsBrachiLongHead: Muscle = {
 }
 
 const bicepsBrachiShortHead: Muscle = {
-  name: 'Biceps Brachii Short Head',
+  name: "Biceps Brachii Short Head",
   origin:
-    'Coracoid process of the scapula and upper lip of the glenoid fossa in conjunction with the proximal attachment of the coracobrachialis',
+    "Coracoid process of the scapula and upper lip of the glenoid fossa in conjunction with the proximal attachment of the coracobrachialis",
   insertion:
-    'Tuberosity of the radius and bicipital aponeurosis (lacertus fibrosis)',
+    "Tuberosity of the radius and bicipital aponeurosis (lacertus fibrosis)",
   action: [
     Action.ForearmSupination,
     Action.ElbowFlexion,
@@ -174,9 +186,9 @@ const bicepsBrachiGroup: Array<Muscle> = [
 ]
 
 const brachialis: Muscle = {
-  name: 'Brachialis',
-  origin: 'Distal half of the anterior shaft of the humerus',
-  insertion: 'Coronoid process of the ulna',
+  name: "Brachialis",
+  origin: "Distal half of the anterior shaft of the humerus",
+  insertion: "Coronoid process of the ulna",
   action: [Action.ElbowFlexion],
   planeMotion: [PlaneMotion.Sagittal],
   innervation: {
@@ -186,11 +198,11 @@ const brachialis: Muscle = {
 }
 
 const brachioRadialis: Muscle = {
-  name: 'Brachio-Radialis',
+  name: "Brachio-Radialis",
   origin:
-    'Distal 2/3 of the lateral condyloid (supracondylar) rydge of the humerus',
+    "Distal 2/3 of the lateral condyloid (supracondylar) rydge of the humerus",
   insertion:
-    'Lateral surface of the distal end of the radius and the styloid process',
+    "Lateral surface of the distal end of the radius and the styloid process",
   action: [
     Action.ElbowFlexion,
     Action.ForearmPronation,
@@ -204,10 +216,10 @@ const brachioRadialis: Muscle = {
 }
 
 const pronatorTeres: Muscle = {
-  name: 'Pronator teres',
+  name: "Pronator teres",
   origin:
-    'Distal part of the medial condyloid ridge of the humerus and medial side of the proximal ulna',
-  insertion: 'Middle 1/3 of the lateral surface of the radius',
+    "Distal part of the medial condyloid ridge of the humerus and medial side of the proximal ulna",
+  insertion: "Middle 1/3 of the lateral surface of the radius",
   action: [Action.ElbowFlexion, Action.ForearmPronation],
   planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Transverse],
   innervation: {
@@ -217,9 +229,9 @@ const pronatorTeres: Muscle = {
 }
 
 const pronatorQuadratus: Muscle = {
-  name: 'Pronator Quadratus',
-  origin: 'Distal 1/4 of the anterior side of the ulna',
-  insertion: 'Distal 1/4 of the anterior side of the radius',
+  name: "Pronator Quadratus",
+  origin: "Distal 1/4 of the anterior side of the ulna",
+  insertion: "Distal 1/4 of the anterior side of the radius",
   action: [Action.ForearmPronation],
   planeMotion: [PlaneMotion.Transverse],
   innervation: {
@@ -229,10 +241,10 @@ const pronatorQuadratus: Muscle = {
 }
 
 const tricepsBrachiLongHead: Muscle = {
-  name: 'Triceps Brachii Long Head',
+  name: "Triceps Brachii Long Head",
   origin:
-    'Infraglenoid tubercle below inferior lip of the glenoid fossa of the scapula',
-  insertion: 'Olecranon process of the ulna',
+    "Infraglenoid tubercle below inferior lip of the glenoid fossa of the scapula",
+  insertion: "Olecranon process of the ulna",
   action: [
     Action.ElbowExtension,
     Action.ShoulderExtension,
@@ -251,9 +263,9 @@ const tricepsBrachiLongHead: Muscle = {
 }
 
 const tricepsBrachiLateralHead: Muscle = {
-  name: 'Triceps Brachii Lateral Head',
-  origin: 'Upper half of the posterior surface of the humerus',
-  insertion: 'Olecranon process of the ulna',
+  name: "Triceps Brachii Lateral Head",
+  origin: "Upper half of the posterior surface of the humerus",
+  insertion: "Olecranon process of the ulna",
   action: [Action.ElbowExtension],
   planeMotion: [PlaneMotion.Sagittal],
   innervation: {
@@ -263,9 +275,9 @@ const tricepsBrachiLateralHead: Muscle = {
 }
 
 const tricepsBrachiMedialHead: Muscle = {
-  name: 'Triceps Brachii Medial Head',
-  origin: 'Distal 2/3 of the posterior surface of the humerus',
-  insertion: 'Olecranon process of the ulna',
+  name: "Triceps Brachii Medial Head",
+  origin: "Distal 2/3 of the posterior surface of the humerus",
+  insertion: "Olecranon process of the ulna",
   action: [Action.ElbowExtension],
   planeMotion: [PlaneMotion.Sagittal],
   innervation: {
@@ -275,10 +287,10 @@ const tricepsBrachiMedialHead: Muscle = {
 }
 
 const supinator: Muscle = {
-  name: 'Supinator',
+  name: "Supinator",
   origin:
-    'Lateral epicondyle of the humerus and the neighboring posterior part of the ulna',
-  insertion: 'Lateral surface of the proximal radius just below the head',
+    "Lateral epicondyle of the humerus and the neighboring posterior part of the ulna",
+  insertion: "Lateral surface of the proximal radius just below the head",
   action: [Action.ForearmSupination],
   planeMotion: [PlaneMotion.Transverse],
   innervation: {
@@ -288,10 +300,10 @@ const supinator: Muscle = {
 }
 
 const anconeus: Muscle = {
-  name: 'Anconeus',
-  origin: 'Posterior surface of the lateral condyle of the humerus',
+  name: "Anconeus",
+  origin: "Posterior surface of the lateral condyle of the humerus",
   insertion:
-    'Posterior surface of the lateral olecranon process and proximal 1/4 of the ulna',
+    "Posterior surface of the lateral olecranon process and proximal 1/4 of the ulna",
   action: [Action.ElbowExtension],
   planeMotion: [PlaneMotion.Sagittal],
   innervation: {
@@ -301,10 +313,10 @@ const anconeus: Muscle = {
 }
 
 const pectoralisMajorUpper: Muscle = {
-  name: 'Pectoralis Major upper fibers',
-  origin: 'Medial half of anterior surface of clavicle',
+  name: "Pectoralis Major upper fibers",
+  origin: "Medial half of anterior surface of clavicle",
   insertion:
-    'Flat tendon 2-3 inches wide to lateral lip of intertubercular groove of humerus',
+    "Flat tendon 2-3 inches wide to lateral lip of intertubercular groove of humerus",
   action: [
     Action.ShoulderInternalRotation,
     Action.ShoulderHorizontalAdduction,
@@ -325,11 +337,11 @@ const pectoralisMajorUpper: Muscle = {
 }
 
 const pectoralisMajorLower: Muscle = {
-  name: 'Pectoralis Major lower fibers',
+  name: "Pectoralis Major lower fibers",
   origin:
-    'Anterior surface of costal cartilages of first six ribs, and adjoining portion of sternum',
+    "Anterior surface of costal cartilages of first six ribs, and adjoining portion of sternum",
   insertion:
-    'Flat tendon 2-3 inches wide to lateral lip of intertubercular groove of humerus',
+    "Flat tendon 2-3 inches wide to lateral lip of intertubercular groove of humerus",
   action: [
     Action.ShoulderInternalRotation,
     Action.ShoulderHorizontalAdduction,
@@ -355,9 +367,9 @@ const pectoralisMajorGroup: Array<Muscle> = [
 ]
 
 const subscapularis: Muscle = {
-  name: 'Sub-scapularis',
-  origin: 'Entire anterior surface of subscapular fossa',
-  insertion: 'Lesser tubercle of humerus',
+  name: "Sub-scapularis",
+  origin: "Entire anterior surface of subscapular fossa",
+  insertion: "Lesser tubercle of humerus",
   action: [
     Action.ShoulderInternalRotation,
     Action.ShoulderExtension,
@@ -378,9 +390,9 @@ const subscapularis: Muscle = {
 }
 
 const coracoBrachialis: Muscle = {
-  name: 'Coraco-brachialis',
-  origin: 'Coracoid process of scapula',
-  insertion: 'Middle of medial border of humeral shaft',
+  name: "Coraco-brachialis",
+  origin: "Coracoid process of scapula",
+  insertion: "Middle of medial border of humeral shaft",
   action: [
     Action.ShoulderDiagonalAdduction,
     Action.ShoulderHorizontalAdduction
@@ -393,9 +405,9 @@ const coracoBrachialis: Muscle = {
 }
 
 const deltoidAnterior: Muscle = {
-  name: 'Deltoid Anterior Fibers',
-  origin: 'Anterior lateral third of clavicle',
-  insertion: 'Deltoid tuberosity on lateral humerus',
+  name: "Deltoid Anterior Fibers",
+  origin: "Anterior lateral third of clavicle",
+  insertion: "Deltoid tuberosity on lateral humerus",
   action: [
     Action.ShoulderAbduction,
     Action.ShoulderFlexion,
@@ -416,9 +428,9 @@ const deltoidAnterior: Muscle = {
 }
 
 const deltoidMiddle: Muscle = {
-  name: 'Deltoid Middle Fibers',
-  origin: 'Lateral aspect of acromion',
-  insertion: 'Deltoid tuberosity on lateral humerus',
+  name: "Deltoid Middle Fibers",
+  origin: "Lateral aspect of acromion",
+  insertion: "Deltoid tuberosity on lateral humerus",
   action: [Action.ShoulderAbduction, Action.ShoulderHorizontalAbduction],
   planeMotion: [PlaneMotion.Transverse, PlaneMotion.Frontal],
   innervation: {
@@ -428,9 +440,9 @@ const deltoidMiddle: Muscle = {
 }
 
 const deltoidPosterior: Muscle = {
-  name: 'Deltoid Posterior Fibers',
-  origin: 'Inferior edge of spine of ulna',
-  insertion: 'Deltoid tuberosity on lateral humerus',
+  name: "Deltoid Posterior Fibers",
+  origin: "Inferior edge of spine of ulna",
+  insertion: "Deltoid tuberosity on lateral humerus",
   action: [
     Action.ShoulderAbduction,
     Action.ShoulderHorizontalAbduction,
@@ -455,9 +467,9 @@ const deltoidGroup: Array<Muscle> = [
 ]
 
 const supraSpinatus: Muscle = {
-  name: 'Supra-spinatus',
-  origin: 'Medial 2/3 of supraspinous fossa',
-  insertion: 'Superiorly on greater tubercle of humerus',
+  name: "Supra-spinatus",
+  origin: "Medial 2/3 of supraspinous fossa",
+  insertion: "Superiorly on greater tubercle of humerus",
   action: [Action.ShoulderAbduction],
   planeMotion: [PlaneMotion.Frontal],
   innervation: {
@@ -467,11 +479,11 @@ const supraSpinatus: Muscle = {
 }
 
 const latissimusDorsi: Muscle = {
-  name: 'Latissimus Dorse',
+  name: "Latissimus Dorse",
   origin:
-    'Posterior crest of ilium, back of sacrum and spinous processes of lumbar and lower six thoracic vertebrae, slips from lower three ribs',
+    "Posterior crest of ilium, back of sacrum and spinous processes of lumbar and lower six thoracic vertebrae, slips from lower three ribs",
   insertion:
-    'Medial side of intertubercular groove of humerus, just anterior to the insertion of the teres major',
+    "Medial side of intertubercular groove of humerus, just anterior to the insertion of the teres major",
   action: [
     Action.ShoulderExtension,
     Action.ShoulderAdduction,
@@ -490,11 +502,11 @@ const latissimusDorsi: Muscle = {
 }
 
 const teresMajor: Muscle = {
-  name: 'Teres Major',
+  name: "Teres Major",
   origin:
-    'Posteriorly on inferior third of lateral border of scapula and just superior to the inferior angle',
+    "Posteriorly on inferior third of lateral border of scapula and just superior to the inferior angle",
   insertion:
-    'Medial lip of intertubercular groove of humerus, just posterior to the insertion of the latissimus dorsi',
+    "Medial lip of intertubercular groove of humerus, just posterior to the insertion of the latissimus dorsi",
   action: [
     Action.ShoulderExtension,
     Action.ShoulderAdduction,
@@ -512,9 +524,9 @@ const teresMajor: Muscle = {
 }
 
 const infraSpinatus: Muscle = {
-  name: 'Infra-spinatus',
-  origin: 'Infraspinous fossa just below spine of scapula',
-  insertion: 'Posteriorly on greater tubercle of humerus',
+  name: "Infra-spinatus",
+  origin: "Infraspinous fossa just below spine of scapula",
+  insertion: "Posteriorly on greater tubercle of humerus",
   action: [
     Action.ShoulderExtension,
     Action.ShoulderDiagonalAbduction,
@@ -533,9 +545,9 @@ const infraSpinatus: Muscle = {
 }
 
 const teresMinor: Muscle = {
-  name: 'Teres Minor',
-  origin: 'Posteriorly on upper and middle aspect of lateral border of scapula',
-  insertion: 'Posteriorly on greater tubercle of humerus',
+  name: "Teres Minor",
+  origin: "Posteriorly on upper and middle aspect of lateral border of scapula",
+  insertion: "Posteriorly on greater tubercle of humerus",
   action: [
     Action.ShoulderExtension,
     Action.ShoulderDiagonalAbduction,
@@ -554,9 +566,9 @@ const teresMinor: Muscle = {
 }
 
 const iliacus: Muscle = {
-  name: 'Iliacus',
-  origin: 'Inner surface of the ilium',
-  insertion: 'Lesser trochanter of the femur and shaft just below',
+  name: "Iliacus",
+  origin: "Inner surface of the ilium",
+  insertion: "Lesser trochanter of the femur and shaft just below",
   action: [
     Action.HipFlexion,
     Action.AnteriorPelvicRotation,
@@ -571,11 +583,11 @@ const iliacus: Muscle = {
 }
 
 const psoas: Muscle = {
-  name: 'Psoas major and minor',
+  name: "Psoas major and minor",
   origin:
-    'Lower borders of the transverse processes (L1–L5), sides of the bodies of the last thoracic vertebra (T12), the lumbar vertebrae (L1–L5), intervertebral fibrocartilages, and base of the sacrum',
+    "Lower borders of the transverse processes (L1–L5), sides of the bodies of the last thoracic vertebra (T12), the lumbar vertebrae (L1–L5), intervertebral fibrocartilages, and base of the sacrum",
   insertion:
-    'Lesser trochanter of the femur and shaft just below psoas minor; pectineal line (of pubis) and iliopectineal eminence',
+    "Lesser trochanter of the femur and shaft just below psoas minor; pectineal line (of pubis) and iliopectineal eminence",
   action: [
     Action.HipFlexion,
     Action.AnteriorPelvicRotation,
@@ -597,11 +609,11 @@ const psoas: Muscle = {
 }
 
 const rectusFemoris: Muscle = {
-  name: 'Rectus Femoris',
+  name: "Rectus Femoris",
   origin:
-    'Anterior inferior iliac spine of the ilium and groove (posteior) above the acetabulum',
+    "Anterior inferior iliac spine of the ilium and groove (posteior) above the acetabulum",
   insertion:
-    'Superior aspect of the patella and patella tendon to the tibial tuberosity',
+    "Superior aspect of the patella and patella tendon to the tibial tuberosity",
   action: [
     Action.HipFlexion,
     Action.KneeExtension,
@@ -615,9 +627,9 @@ const rectusFemoris: Muscle = {
 }
 
 const sartorius: Muscle = {
-  name: 'Sartorius',
-  origin: 'Anterior superior iliac spine and notch just below the spine',
-  insertion: 'Anterior medial surface of the tibia just below the condyle',
+  name: "Sartorius",
+  origin: "Anterior superior iliac spine and notch just below the spine",
+  insertion: "Anterior medial surface of the tibia just below the condyle",
   action: [
     Action.HipFlexion,
     Action.KneeFlexion,
@@ -638,10 +650,10 @@ const sartorius: Muscle = {
 }
 
 const pectineus: Muscle = {
-  name: 'Pectineus',
-  origin: 'Space 1 inch wide on the front of the pubis just above the crest',
+  name: "Pectineus",
+  origin: "Space 1 inch wide on the front of the pubis just above the crest",
   insertion:
-    'Rough line leading from the lesser trochanter down to the linea aspera',
+    "Rough line leading from the lesser trochanter down to the linea aspera",
   action: [Action.HipFlexion, Action.HipAdduction, Action.HipExternalRotation],
   planeMotion: [
     PlaneMotion.Sagittal,
@@ -655,11 +667,11 @@ const pectineus: Muscle = {
 }
 
 const adductorBrevis: Muscle = {
-  name: 'Adductor Brevis',
+  name: "Adductor Brevis",
   origin:
-    'Front of the inferior pubic ramus just below the origin of the adductor longus',
+    "Front of the inferior pubic ramus just below the origin of the adductor longus",
   insertion:
-    'Lower 2/3 of the pectineal line of the femur and the upper half of the medial lip of the linea aspera',
+    "Lower 2/3 of the pectineal line of the femur and the upper half of the medial lip of the linea aspera",
   action: [Action.HipFlexion, Action.HipAdduction, Action.HipExternalRotation],
   planeMotion: [
     PlaneMotion.Sagittal,
@@ -673,9 +685,9 @@ const adductorBrevis: Muscle = {
 }
 
 const adductorLongus: Muscle = {
-  name: 'Adductor Longus',
-  origin: 'Anterior pubis just below its crest',
-  insertion: 'Middle 1/3 of the linea aspera',
+  name: "Adductor Longus",
+  origin: "Anterior pubis just below its crest",
+  insertion: "Middle 1/3 of the linea aspera",
   action: [Action.HipFlexion, Action.HipAdduction],
   planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Frontal],
   innervation: {
@@ -685,11 +697,11 @@ const adductorLongus: Muscle = {
 }
 
 const adductorMagnus: Muscle = {
-  name: 'Adductor Magnus',
+  name: "Adductor Magnus",
   origin:
-    'Edge of the en- tire pubic ramus and the ischium and ischial tuberosity',
+    "Edge of the en- tire pubic ramus and the ischium and ischial tuberosity",
   insertion:
-    'Whole length of the linea aspera, inner condyloid ridge, and adductor tubercle',
+    "Whole length of the linea aspera, inner condyloid ridge, and adductor tubercle",
   action: [
     Action.HipExtension,
     Action.HipAdduction,
@@ -715,9 +727,9 @@ const adductorMagnus: Muscle = {
 }
 
 const gracilis: Muscle = {
-  name: 'Gracilis',
-  origin: 'Anteromedial edge of the descending ramus of the pubis',
-  insertion: 'Anterior medial surface of the tibia below the condyle',
+  name: "Gracilis",
+  origin: "Anteromedial edge of the descending ramus of the pubis",
+  insertion: "Anterior medial surface of the tibia below the condyle",
   action: [
     Action.HipFlexion,
     Action.HipAdduction,
@@ -737,10 +749,10 @@ const gracilis: Muscle = {
 }
 
 const semitendinosus: Muscle = {
-  name: 'Semitendinosus',
-  origin: 'Ischial tuberosity',
+  name: "Semitendinosus",
+  origin: "Ischial tuberosity",
   insertion:
-    'Upper anterior medial surface of the tibia just below the condyle',
+    "Upper anterior medial surface of the tibia just below the condyle",
   action: [
     Action.HipExtension,
     Action.HipInternalRotation,
@@ -756,9 +768,9 @@ const semitendinosus: Muscle = {
 }
 
 const semimembranosus: Muscle = {
-  name: 'Semimembranosus',
-  origin: 'Ischial tuberosity',
-  insertion: 'Posteromedial surface of the medial tibial condyle',
+  name: "Semimembranosus",
+  origin: "Ischial tuberosity",
+  insertion: "Posteromedial surface of the medial tibial condyle",
   action: [
     Action.KneeFlexion,
     Action.HipExtension,
@@ -774,10 +786,10 @@ const semimembranosus: Muscle = {
 }
 
 const bicepsFemoris: Muscle = {
-  name: 'Biceps Femoris',
+  name: "Biceps Femoris",
   origin:
-    'Long head: ischial tuberosity. Short head: lower half of the linea aspera, and lateral condyloid ridge',
-  insertion: 'Head of the fibula and lateral condyle of the tibia',
+    "Long head: ischial tuberosity. Short head: lower half of the linea aspera, and lateral condyloid ridge",
+  insertion: "Head of the fibula and lateral condyle of the tibia",
   action: [
     Action.KneeFlexion,
     Action.HipExtension,
@@ -793,11 +805,11 @@ const bicepsFemoris: Muscle = {
 }
 
 const gluteusMaximus: Muscle = {
-  name: 'Gluteus Maximus',
+  name: "Gluteus Maximus",
   origin:
-    'Posterior 1/4 of the crest of the ilium, posterior surface of the sacrum and coccyx near the ilium, and fascia of the lumbar area',
+    "Posterior 1/4 of the crest of the ilium, posterior surface of the sacrum and coccyx near the ilium, and fascia of the lumbar area",
   insertion:
-    'Oblique ridge on the lateral surface of the greater trochanter and the iliotibial band of the fasciae latae',
+    "Oblique ridge on the lateral surface of the greater trochanter and the iliotibial band of the fasciae latae",
   action: [
     Action.HipExtension,
     Action.PelvicPosteriorRotation,
@@ -817,10 +829,10 @@ const gluteusMaximus: Muscle = {
 }
 
 const gluteusMedius: Muscle = {
-  name: 'Gluteus Medius',
-  origin: 'Lateral surface of the ilium just below the crest',
+  name: "Gluteus Medius",
+  origin: "Lateral surface of the ilium just below the crest",
   insertion:
-    'Posterior and middle surfaces of the greater trochanter of the femur',
+    "Posterior and middle surfaces of the greater trochanter of the femur",
   action: [
     Action.HipAbduction,
     Action.HipExtension,
@@ -842,10 +854,10 @@ const gluteusMedius: Muscle = {
 }
 
 const gluteusMinimus: Muscle = {
-  name: 'Gluteus Minimus',
+  name: "Gluteus Minimus",
   origin:
-    'Lateral surface of the ilium just below the origin of the gluteus medius',
-  insertion: 'Anterior surface of the greater trochanter of the femur',
+    "Lateral surface of the ilium just below the origin of the gluteus medius",
+  insertion: "Anterior surface of the greater trochanter of the femur",
   action: [
     Action.HipAbduction,
     Action.PelvicLateralRotation,
@@ -865,10 +877,10 @@ const gluteusMinimus: Muscle = {
 }
 
 const tensorFasciaeLatae: Muscle = {
-  name: 'Tensor Fasciae Latae',
-  origin: 'Anterior iliac crest and surface of the ilium just below the crest',
+  name: "Tensor Fasciae Latae",
+  origin: "Anterior iliac crest and surface of the ilium just below the crest",
   insertion:
-    'One-fourth of the way down the thigh into the iliotibial tract, which in turn inserts onto Gerdy’s tubercle of the anterolateral tibial condyle',
+    "One-fourth of the way down the thigh into the iliotibial tract, which in turn inserts onto Gerdy’s tubercle of the anterolateral tibial condyle",
   action: [
     Action.HipAbduction,
     Action.PelvicLateralRotation,
@@ -888,10 +900,10 @@ const tensorFasciaeLatae: Muscle = {
 }
 
 const piriformis: Muscle = {
-  name: 'Piriformis',
+  name: "Piriformis",
   origin:
-    'Anterior sacrum, posterior portions of the ischium, and obturator foramen',
-  insertion: 'Superior and posterior aspect of the greater trochanter',
+    "Anterior sacrum, posterior portions of the ischium, and obturator foramen",
+  insertion: "Superior and posterior aspect of the greater trochanter",
   action: [Action.HipExternalRotation],
   planeMotion: [PlaneMotion.Transverse],
   innervation: {
@@ -901,10 +913,10 @@ const piriformis: Muscle = {
 }
 
 const gemellusSuperior: Muscle = {
-  name: 'Gemellus Superior',
-  origin: 'Ischial Spine',
+  name: "Gemellus Superior",
+  origin: "Ischial Spine",
   insertion:
-    'Posterior aspect of the greater trochanter immediately below piriformis',
+    "Posterior aspect of the greater trochanter immediately below piriformis",
   action: [Action.HipExternalRotation],
   planeMotion: [PlaneMotion.Transverse],
   innervation: {
@@ -914,10 +926,10 @@ const gemellusSuperior: Muscle = {
 }
 
 const gemellusInferior: Muscle = {
-  name: 'Gemellus Inferior',
-  origin: 'Ischial tuberosity',
+  name: "Gemellus Inferior",
+  origin: "Ischial tuberosity",
   insertion:
-    'Posterior aspect of the greater trochanter with obturator internus',
+    "Posterior aspect of the greater trochanter with obturator internus",
   action: [Action.HipExternalRotation],
   planeMotion: [PlaneMotion.Transverse],
   innervation: {
@@ -927,10 +939,10 @@ const gemellusInferior: Muscle = {
 }
 
 const obturatorInternus: Muscle = {
-  name: 'Obturator Internus',
-  origin: 'Margin of obturator foramen',
+  name: "Obturator Internus",
+  origin: "Margin of obturator foramen",
   insertion:
-    'Posterior aspect of the greater trochanter with gamellus superior',
+    "Posterior aspect of the greater trochanter with gamellus superior",
   action: [Action.HipExternalRotation],
   planeMotion: [PlaneMotion.Transverse],
   innervation: {
@@ -940,10 +952,10 @@ const obturatorInternus: Muscle = {
 }
 
 const obturatorExternus: Muscle = {
-  name: 'Obturator Externus',
-  origin: 'Inferior margin of obturator foramen',
+  name: "Obturator Externus",
+  origin: "Inferior margin of obturator foramen",
   insertion:
-    'Posterior aspect of the greater trochanter immediately below obturator internus',
+    "Posterior aspect of the greater trochanter immediately below obturator internus",
   action: [Action.HipExternalRotation],
   planeMotion: [PlaneMotion.Transverse],
   innervation: {
@@ -953,9 +965,9 @@ const obturatorExternus: Muscle = {
 }
 
 const quadratusFemoris: Muscle = {
-  name: 'Quadratus Femoris',
-  origin: 'Ischial tuberosity',
-  insertion: 'Intertrochanteric ridge of femur',
+  name: "Quadratus Femoris",
+  origin: "Ischial tuberosity",
+  insertion: "Intertrochanteric ridge of femur",
   action: [Action.HipExternalRotation],
   planeMotion: [PlaneMotion.Transverse],
   innervation: {
@@ -969,10 +981,10 @@ const quadratusFemoris: Muscle = {
 }
 
 const vastusIntermedius: Muscle = {
-  name: 'Vastus Intermedius',
-  origin: 'Upper 2/3 of anterior surface of femur',
+  name: "Vastus Intermedius",
+  origin: "Upper 2/3 of anterior surface of femur",
   insertion:
-    'Upper border of the patella and patellar tendon to tibial tuberosity',
+    "Upper border of the patella and patellar tendon to tibial tuberosity",
   action: [Action.KneeExtension],
   planeMotion: [PlaneMotion.Sagittal],
   innervation: {
@@ -982,11 +994,11 @@ const vastusIntermedius: Muscle = {
 }
 
 const vastusLateralis: Muscle = {
-  name: 'Vastus Lateralis',
+  name: "Vastus Lateralis",
   origin:
-    'Intertrochanteric line, anterior and inferior borders of the greater trochanter, gluteal tuberosity, upper half of the linea aspera, and entire lateral intermuscular septum',
+    "Intertrochanteric line, anterior and inferior borders of the greater trochanter, gluteal tuberosity, upper half of the linea aspera, and entire lateral intermuscular septum",
   insertion:
-    'Lateral border of the patella and patellar tendon to tibial tuberosity',
+    "Lateral border of the patella and patellar tendon to tibial tuberosity",
   action: [Action.KneeExtension],
   planeMotion: [PlaneMotion.Sagittal],
   innervation: {
@@ -996,10 +1008,10 @@ const vastusLateralis: Muscle = {
 }
 
 const vastusMedialis: Muscle = {
-  name: 'Vastus Medialis',
-  origin: 'Whole length of linea aspera and medial condyloid ridge',
+  name: "Vastus Medialis",
+  origin: "Whole length of linea aspera and medial condyloid ridge",
   insertion:
-    'Medial half of upper border of patella and patellar tendon to tibial tuberosity',
+    "Medial half of upper border of patella and patellar tendon to tibial tuberosity",
   action: [Action.KneeExtension],
   planeMotion: [PlaneMotion.Sagittal],
   innervation: {
@@ -1009,9 +1021,9 @@ const vastusMedialis: Muscle = {
 }
 
 const popliteus: Muscle = {
-  name: 'Popliteus',
-  origin: 'Posterior surface of lateral condyle of femur',
-  insertion: 'Upper posterior medial surface of tibia',
+  name: "Popliteus",
+  origin: "Posterior surface of lateral condyle of femur",
+  insertion: "Upper posterior medial surface of tibia",
   action: [Action.KneeFlexion, Action.KneeInternalRotation],
   planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Transverse],
   innervation: {
@@ -1021,14 +1033,151 @@ const popliteus: Muscle = {
 }
 
 const gastrocnemius: Muscle = {
-  name: 'Gastrocnemius',
-  origin: 'Posterior surface of lateral condyle of femur',
-  insertion: 'Upper posterior medial surface of tibia',
-  action: [Action.KneeFlexion, Action.KneeInternalRotation],
-  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Transverse],
+  name: "Gastrocnemius",
+  origin:
+    "Medial head: posterior surface of the medial femoral condyle Lateral head: posterior surface of the lateral femoral condyle",
+  insertion: "Posterior surface of the calcaneus (Achilles tendon)",
+  action: [Action.KneeFlexion, Action.anklePlantarFlexion],
+  planeMotion: [PlaneMotion.Sagittal],
   innervation: {
     nerve: [InnervationNerves.Tibial],
     root: [NerveRoots.s1, NerveRoots.s2]
+  }
+}
+
+const soleus: Muscle = {
+  name: "Soleus",
+  origin:
+    "Posterior surface of the proximal fibula and proximal 2/3 of the posterior tibial surface",
+  insertion: "Posterior surface of the calcaneus (Achilles tendon)",
+  action: [Action.KneeFlexion, Action.anklePlantarFlexion],
+  planeMotion: [PlaneMotion.Sagittal],
+  innervation: {
+    nerve: [InnervationNerves.Tibial],
+    root: [NerveRoots.s1, NerveRoots.s2]
+  }
+}
+
+const tibialisPosterior: Muscle = {
+  name: "Tibialis Posterior",
+  origin:
+    "Posterior surface of the upper half of the interosseus membrane and the adjacent surfaces of the tibia and fibula",
+  insertion:
+    "Inferior surfaces of the navicular, cuneiform, and cuboid bones and bases of the 2nd, 3rd, and 4th metatarsal bones",
+  action: [Action.anklePlantarFlexion, Action.footInversion],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Frontal],
+  innervation: {
+    nerve: [InnervationNerves.Tibial],
+    root: [NerveRoots.s1, NerveRoots.l5]
+  }
+}
+
+const flexorDigitorumLongus: Muscle = {
+  name: "Flexor digitorum longus",
+  origin: "Middle 1/3 of the posterior surface of the tibia",
+  insertion: "Base of the distal phalanx of each of the four lesser toes",
+  action: [Action.anklePlantarFlexion, Action.footInversion],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Frontal],
+  innervation: {
+    nerve: [InnervationNerves.Tibial],
+    root: [NerveRoots.s1, NerveRoots.l5]
+  }
+}
+
+const flexorHallucisLongus: Muscle = {
+  name: "Flexor hallucis longus",
+  origin: "Middle 2/3 of the posterior surface of the fibula",
+  insertion: "Base of the distal phalanx of the great toe; plantar surface",
+  action: [
+    Action.anklePlantarFlexion,
+    Action.footInversion,
+    Action.greatToeFlexion
+  ],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Frontal],
+  innervation: {
+    nerve: [InnervationNerves.Tibial],
+    root: [NerveRoots.s1, NerveRoots.l5, NerveRoots.s2]
+  }
+}
+
+const peroneusLongus: Muscle = {
+  name: "Peroneus (fibularis) longus",
+  origin: "Head and upper 2/3 of the lateral surface of the fibula",
+  insertion: "Undersurfaces of the medial cuneiform and 1st metatarsal bone",
+  action: [Action.anklePlantarFlexion, Action.footEversion],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Frontal],
+  innervation: {
+    nerve: [InnervationNerves.SuperficialPeroneal],
+    root: [NerveRoots.l4, NerveRoots.l5, NerveRoots.s1]
+  }
+}
+
+const peroneusBrevis: Muscle = {
+  name: "Peroneus (fibularis) brevis",
+  origin: "Mid to lower 2/3 of the lateral surface of the fibula",
+  insertion: "Tuberosity of the 5th metatarsal bone",
+  action: [Action.anklePlantarFlexion, Action.footEversion],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Frontal],
+  innervation: {
+    nerve: [InnervationNerves.SuperficialPeroneal],
+    root: [NerveRoots.l4, NerveRoots.l5, NerveRoots.s1]
+  }
+}
+
+const peroneusTertius: Muscle = {
+  name: "Peroneus (fibularis) tertius",
+  origin: "Distal 1/3 of the anterior fibula",
+  insertion: "Superior aspect of the base of the 5th metatarsal",
+  action: [Action.ankleDorsiFlexion, Action.footEversion],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Frontal],
+  innervation: {
+    nerve: [InnervationNerves.DeepPeroneal],
+    root: [NerveRoots.l4, NerveRoots.l5, NerveRoots.s1]
+  }
+}
+const extensorDigitorumLongus: Muscle = {
+  name: "Extensor digitorum longus",
+  origin:
+    "Lateral condyle of the tibia, head of the fibula, and upper 2/3 of the anterior surface of the fibula",
+  insertion: "Tops of the middle and distal phalanges of the four lesser toes",
+  action: [
+    Action.ankleDorsiFlexion,
+    Action.footEversion,
+    Action.fourLesserExtension
+  ],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Frontal],
+  innervation: {
+    nerve: [InnervationNerves.DeepPeroneal],
+    root: [NerveRoots.l4, NerveRoots.l5, NerveRoots.s1]
+  }
+}
+
+const extensorHallucisLongus: Muscle = {
+  name: "Extensor hallucis longus",
+  origin: "Middle 2/3 of the medial surface of the anterior fibula",
+  insertion: "Base of the distal phalanx of the great toe",
+  action: [
+    Action.ankleDorsiFlexion,
+    Action.footEversion,
+    Action.greatToeExtension
+  ],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Frontal],
+  innervation: {
+    nerve: [InnervationNerves.DeepPeroneal],
+    root: [NerveRoots.l4, NerveRoots.l5, NerveRoots.s1]
+  }
+}
+
+const tibialisAnterior: Muscle = {
+  name: "Tibialis Anterior",
+  origin: "Upper 2/3 of the lateral surface of the tibia",
+  insertion:
+    "Inner surface of the medial cuneiform and the base of the 1st metatarsal bone",
+  action: [Action.ankleDorsiFlexion, Action.footInversion],
+  planeMotion: [PlaneMotion.Sagittal, PlaneMotion.Frontal],
+  innervation: {
+    nerve: [InnervationNerves.DeepPeroneal],
+    root: [NerveRoots.l4, NerveRoots.l5, NerveRoots.s1]
   }
 }
 

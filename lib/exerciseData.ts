@@ -1,4 +1,5 @@
 import * as Effectors from './data.json'
+import { Material } from './materialData'
 
 interface Muscle {
   name: string
@@ -43,11 +44,7 @@ const e3_1: Exercise = {
     Effectors['Triceps Brachii Long Head'],
     Effectors['Deltoid Anterior Fibers']
   ],
-  material: {
-    reference: 'm1_1',
-    name: 'Mancuernas',
-    assistance: AssistanceDegree.Free
-  }
+  material: Material.m1_1
 }
 
 const e3_2: Exercise = {
@@ -61,11 +58,7 @@ const e3_2: Exercise = {
     Effectors['Triceps Brachii Long Head'],
     Effectors['Deltoid Anterior Fibers']
   ],
-  material: {
-    reference: 'm1_2',
-    name: 'Barra',
-    assistance: AssistanceDegree.Free
-  }
+  material: Material.m1_5
 }
 
 // Brazos
@@ -621,6 +614,7 @@ const e231: Exercise = {
   tipoMaterial: tipoMaterial.maquinaAsistencia,
   material: Array
 }
+
 const e311: Exercise = {
   reference: '311',
   name: 'Press de banco inclinado',
