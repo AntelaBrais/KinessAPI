@@ -132,7 +132,7 @@ interface Muscle {
   name: string
   origin: string
   insertion: string
-  action: Array<Action>
+  action: Array<Action> | Array<string>
   planeMotion: Array<PlaneMotion>
   innervation: Innervation
 }
@@ -1172,7 +1172,7 @@ const flexorDigitorumBrevis: Muscle = {
   origin: "Tuberosity of calcaneus, plantar aponeurosis",
   insertion:
     "Medial and lateral aspects of 2nd, 3rd, 4th, and 5th middle phalanxes",
-  action: [Action["MP and PIP flexion of 2nd, 3rd, 4th, and 5th phalanges"]],
+  action: ["MP and PIP flexion of 2nd, 3rd, 4th, and 5th phalanges"],
   planeMotion: [undefined],
   innervation: {
     nerve: [InnervationNerves.MedialPlantar],
@@ -1184,7 +1184,7 @@ const abductorDigitiMinimi: Muscle = {
   name: "Abductor digiti minimi (quinti)",
   origin: "Tuberosity of calcaneus, plantar aponeurosis",
   insertion: "Lateral aspect of 5th proximal phalanx",
-  action: [Action["MP abduc- tion of 5th phalange"]],
+  action: ["MP abduc- tion of 5th phalange"],
   planeMotion: [undefined],
   innervation: {
     nerve: [InnervationNerves.LateralPlantar],
@@ -1196,7 +1196,7 @@ const abductorHallucis: Muscle = {
   name: "Abductor hallucis",
   origin: "Tuberosity of calcaneus, flexor retinaculum, plantar aponeurosis",
   insertion: "Medial aspect of base of 1st proximal phalanx",
-  action: [Action["MP flexion, abduction of 1st phalange"]],
+  action: ["MP flexion, abduction of 1st phalange"],
   planeMotion: [undefined],
   innervation: {
     nerve: [InnervationNerves.MedialPlantar],
@@ -1209,7 +1209,7 @@ const quadratusPlantae: Muscle = {
   origin:
     "Medial head: medial surface of calcaneus Lateral head: lateral border of inferior surface of calcaneus",
   insertion: "Lateral margin of flexor digitorum longus tendon",
-  action: [Action["DIP flexion of 2nd, 3rd, 4th, and 5th phalanges"]],
+  action: ["DIP flexion of 2nd, 3rd, 4th, and 5th phalanges"],
   planeMotion: [undefined],
   innervation: {
     nerve: [InnervationNerves.LateralPlantar],
@@ -1221,7 +1221,7 @@ const footLumbricals: Muscle = {
   name: "Foot Lumbricals",
   origin: "Tendons of flexor digitorum longus",
   insertion: "Dorsal surface of 2nd, 3rd, 4th, and 5th proximal phalanxes",
-  action: [Action["MP flexion of 2nd, 3rd, 4th, and 5th phalanges"]],
+  action: ["MP flexion of 2nd, 3rd, 4th, and 5th phalanges"],
   planeMotion: [undefined],
   innervation: {
     nerve: [InnervationNerves.LateralPlantar, InnervationNerves.MedialPlantar],
@@ -1234,7 +1234,7 @@ const adductorHallucis: Muscle = {
   origin:
     "Oblique head: 2nd, 3rd, and 4th meta- tarsals and sheath of peroneus longus tendon. Transverse head: plantar metatarso- phalangeal liga- ments of 3rd, 4th, and 5th phalan- ges and trans- verse metatarsal ligaments",
   insertion: "Lateral aspect of base of 1st proximal phalanx",
-  action: [Action["MP adduc- tion of 1st phalange"]],
+  action: ["MP adduc- tion of 1st phalange"],
   planeMotion: [undefined],
   innervation: {
     nerve: [InnervationNerves.LateralPlantar],
@@ -1247,7 +1247,7 @@ const flexorHallucisBrevis: Muscle = {
   origin:
     "Medial head: medial aspect of 1st proximal phalanx. Lateral head: lateral aspect of 1st proximal phalanx",
   insertion: "Lateral aspect of base of 1st proximal phalanx",
-  action: [Action["MP flexion of 1st phalange"]],
+  action: ["MP flexion of 1st phalange"],
   planeMotion: [undefined],
   innervation: {
     nerve: [InnervationNerves.MedialPlantar],
@@ -1259,7 +1259,7 @@ const flexorDigitiMinimiBrevis: Muscle = {
   name: "Flexor digiti minimi (quinti) brevis",
   origin: "Base of 5th meta- tarsal, sheath of peroneus longus tendon",
   insertion: "Lateral aspect of base of 5th proximal phalanx",
-  action: [Action["MP flexion of 5th phalange"]],
+  action: ["MP flexion of 5th phalange"],
   planeMotion: [undefined],
   innervation: {
     nerve: [InnervationNerves.LateralPlantar],
@@ -1271,7 +1271,7 @@ const plantarInterossei: Muscle = {
   name: "Plantar interossei",
   origin: "Bases and medial shafts of 3rd, 4th, and 5th metatarsals",
   insertion: "Medial aspects of bases of 3rd, 4th, and 5th proximal phalanxes",
-  action: [Action["MP adduction and flexion of 3rd, 4th, and 5th phalanges"]],
+  action: ["MP adduction and flexion of 3rd, 4th, and 5th phalanges"],
   planeMotion: [undefined],
   innervation: {
     nerve: [InnervationNerves.LateralPlantar],
@@ -1284,7 +1284,7 @@ const dorsalInterossei: Muscle = {
   origin: "Two heads on shafts of adjacent metatarsals",
   insertion:
     "1st interosseus: medial aspect of 2nd proximal phalanx 2nd, 3rd, and 4th interossei: lateral aspects of 2nd, 3rd, and 4th proximal phalanxes",
-  action: [Action["MP abduction and flexion of 2nd, 3rd, and 4th phalanges"]],
+  action: ["MP abduction and flexion of 2nd, 3rd, and 4th phalanges"],
   planeMotion: [undefined],
   innervation: {
     nerve: [InnervationNerves.LateralPlantar],
@@ -1299,9 +1299,7 @@ const extensorDigitorumBrevis: Muscle = {
   insertion:
     "Base of proximal phalanx of 1st phalange, lateral sides of extensor digitorum longus tendons of 2nd, 3rd, and 4th phalanges",
   action: [
-    Action[
-      "Assists in MP extension of 1st phalange and extension of middle three phalanges"
-    ]
+    "Assists in MP extension of 1st phalange and extension of middle three phalanges"
   ],
   planeMotion: [undefined],
   innervation: {
@@ -1317,9 +1315,7 @@ const extensorHallucisBrevis: Muscle = {
   insertion:
     "Base of proximal phalanx of 1st phalange, lateral sides of extensor digitorum longus tendons of 2nd, 3rd, and 4th phalanges",
   action: [
-    Action[
-      "Assists in MP extension of 1st phalange and extension of middle three phalanges"
-    ]
+    "Assists in MP extension of 1st phalange and extension of middle three phalanges"
   ],
   planeMotion: [undefined],
   innervation: {
