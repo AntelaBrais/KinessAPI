@@ -26,18 +26,3 @@ const server = new ApolloServer({
 server.listen().then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`)
 })
-
-// app.use(cors())
-
-// app.use(
-//   '/api',
-//   graphqlHTTP({
-//     schema: schema,
-//     rootValue: resolvers,
-//     graphiql: true
-//   })
-// )
-
-// app.listen(port, () => {
-//   console.log(`Server is listening at http://localhost:${port}/api`)
-// })
