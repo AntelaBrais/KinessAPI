@@ -1,3 +1,36 @@
+interface User {
+  id: ID!
+  name: String!
+}
+
+type Equipment {
+  name: String
+  quantityFree: Int  
+}
+
+type InstructorClass {
+  allDay: Boolean!
+  className: String!
+  coach: Coach
+}
+
+type FitnessCentre {
+  name: String!
+  equipment: [Equipment]
+  instructorClasses: 
+}
+
+type User implements User {
+  id: ID!
+  name: String!
+}
+
+type Coach implements User {
+  id: ID!
+  name: String!
+
+}
+
 type Innervation {
   nerve: [String]
   root: [String]
