@@ -5,7 +5,7 @@ interface User {
 
 type Equipment {
   name: String
-  quantityFree: Int  
+  quantityFree: Int
 }
 
 type InstructorClass {
@@ -17,10 +17,10 @@ type InstructorClass {
 type FitnessCentre {
   name: String!
   equipment: [Equipment]
-  instructorClasses: 
+  instructorClasses: String
 }
 
-type User implements User {
+type Client implements User {
   id: ID!
   name: String!
 }
@@ -28,7 +28,6 @@ type User implements User {
 type Coach implements User {
   id: ID!
   name: String!
-
 }
 
 type Innervation {

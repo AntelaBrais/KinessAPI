@@ -1,38 +1,19 @@
-// Los resolvers son las funciones que se encargan de resolver la petición (Query) realizada. Un ejemplo metafórico sería una oficina de paquetería, donde llega una persona al mostrador, hace una consulta con el paquete (data) que quiere, el resolver es la persona que se encarga de ir a buscar el paquete a la zona del almacén y traerlo de vuelta a la persona. Los resolvers entiendes determinadas consultas. Cuando llegas a la oficina de paquetería hay unas reglas de cómo pedir tu paquete, esas normas están escritas en las Query. Los resolvers solo entienden esas Query especificadas.
-
-// import { db } from './db'
 import {
   Effectors,
   Action,
   InnervationNerves,
   PlaneMotion,
-  NerveRoots
-} from './muscleData'
+  NerveRoots,
+} from "./muscleData"
 
 export const resolvers = {
   Query: {
-    // getCourses: () => {
-    //   let courses = []
-    //   let docsRef = db.collection('afinityExercises')
-    //   let allExercises = docsRef
-    //     .get()
-    //     .then((snapshot) => {
-    //       snapshot.forEach((doc) => {
-    //         courses.push(doc)
-    //         console.log(doc.id, '=>', doc.data())
-    //       })
-    //     })
-    //     .catch((err) => {
-    //       console.log('Error getting documents', err)
-    //     })
-    //   return courses
-    // },
     Muscles: (root, args) => {
       if (Object.entries(args).length === 0) {
-        console.log('Cero')
+        console.log("Cero")
         return Effectors
       } else if (Object.entries(args).length !== 0) {
-        console.log('No Cero')
+        console.log("No Cero")
         let muscles = Effectors
 
         if (args.name) {
@@ -152,6 +133,6 @@ export const resolvers = {
         })
         return planes
       }
-    }
-  }
+    },
+  },
 }
