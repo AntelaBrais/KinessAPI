@@ -1,0 +1,114 @@
+enum Day {
+  Lunes
+  Martes
+  Miercoles
+  Jueves
+  Viernes
+  Sabado
+  Domingo
+}
+
+type Centre {
+  id: ID!
+  name: String
+  equipment: [Equipment!]
+}
+
+type Equipment {
+  id: ID!
+  name: String
+  quantityFree: Int
+  centre: Centre!
+}
+
+type Exercise {
+  id: ID!
+  name: String
+  sets: Int
+  reps: Int
+  restTime: Int
+  equipment: [Equipment!]
+  session: Session
+}
+
+interface Session {
+  id: ID!
+  name: String
+  exercises: [Exercise]
+  date: [Day!]!
+  editableByMonitor: Boolean!
+}
+
+type Fitness {
+  sessions: [Session]
+}
+
+type UseOfCentre {
+  id: ID!
+}
+
+interface User {
+  id: ID!
+  name: String!
+}
+
+type Client implements User {
+  id: ID!
+  name: String!
+  useOfCentre: UseOfCentre
+  fitness: Fitness
+}
+
+type Coach implements User {
+  id: ID!
+  name: String!
+}
+
+type InstructorClass {
+  id: ID!
+  title: String
+  allDay: Boolean!
+  start: Int
+  end: Int
+  coach: Coach
+  maxSeats: Int
+  seatsOccupied: Int
+  usersQueue: [Client]
+}
+
+type FitnessCentre {
+  name: String!
+  equipment: [Equipment]
+  instructorClasses: String
+}
+
+type Query {
+  allEquipment(centre: String): [Equipment]
+}
+
+type Mutation {
+  addExercise(
+    name: String!
+    sets: Int!
+    reps: Int!
+    restTime: Int!
+    session: Session!
+  ): Exercise
+  updateExercise(
+    id: ID!
+    name: String
+    sets: Int
+    reps: Int
+    restTime: Int
+  ): Exercise
+  removeExercise(
+    id: ID!
+    name: String!
+    sets: Int!
+    reps: Int!
+    restTime: Int!
+  ): Exercise
+  addSession(name: String): Session
+  updateSession(name: String): Session
+  removeSession(name: String): Session
+}

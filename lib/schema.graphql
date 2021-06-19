@@ -1,35 +1,3 @@
-interface User {
-  id: ID!
-  name: String!
-}
-
-type Equipment {
-  name: String
-  quantityFree: Int
-}
-
-type InstructorClass {
-  allDay: Boolean!
-  className: String!
-  coach: Coach
-}
-
-type FitnessCentre {
-  name: String!
-  equipment: [Equipment]
-  instructorClasses: String
-}
-
-type Client implements User {
-  id: ID!
-  name: String!
-}
-
-type Coach implements User {
-  id: ID!
-  name: String!
-}
-
 type Innervation {
   nerve: [String]
   root: [String]
@@ -44,7 +12,7 @@ type Muscle {
   innervation: Innervation
 }
 
-# Los query son las posibles consultas que puedo realizar a la API. Es decir, las funciones con las que puedo consultar datos a la base de datos.
+# Los query son las firmas de las consultas que puedo realizar a la API.
 type Query {
   "Devuelve una lista de músculos que cumplan los parámetros indicados"
   Muscles(
